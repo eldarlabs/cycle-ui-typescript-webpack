@@ -1,0 +1,55 @@
+{
+  "name": "@eldarlabs/cycle-ui-typescript-webpack",
+  "version": "0.0.1",
+  "description": "Starter project with Cycle-UI, TypeScript and WebPack",
+  "main": "index.ts",
+  "scripts": {
+    "tsc": "tsc",
+    "typings": "typings",
+    "tslint": "tslint",
+    "start": "node server.js",
+    "build": "webpack --progress --colors --config webpack.production.config.js",
+    "clean": "rm -rf build/",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cycle-ui"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eldarlabs/cycle-ui-typescript-webpack.git"
+  },
+  "bugs": {
+    "url": "https://github.com/eldarlabs/cycle-ui-typescript-webpack/issues"
+  },
+  "author": "Eldar Labs (https://eldarlabs.com)",
+  "license": "MIT",
+  "dependencies": {
+    "@cycle/core": "^6.0.0",
+    "@cycle/dom": "^8.1.0",
+    "@cycle/isolate": "^1.2.x",
+    "@eldarlabs/cycle-ui": "0.0.4",
+    "autoprefixer": "^6.3.3",
+    "classnames": "2.2.3",
+    "normalize.css": "^3.0.3",
+    "react-toolbox": "^0.14.1",
+    "rx": "^4.0.7"
+  },
+  "devDependencies": {
+    "css-loader": "^0.23.0",
+    "extract-text-webpack-plugin": "^0.9.1",
+    "json-loader": "^0.5.4",
+    "node-sass": "^3.4.2",
+    "path": "^0.11.14",
+    "postcss-loader": "^0.8.1",
+    "sass-loader": "^3.1.2",
+    "style-loader": "^0.13.0",
+    "toolbox-loader": "0.0.3",
+    "ts-loader": "^0.7.2",
+    "tslint": "^3.5.0",
+    "typescript": "^1.8.5",
+    "typings": "^0.6.9",
+    "webpack": "^1.10.1",
+    "webpack-dev-server": "^1.7.0"
+  }
+}
