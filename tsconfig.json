@@ -1,7 +1,6 @@
 {
 	"compilerOptions": {
 	  "declaration": true,
-		"allowJs": false,
 		"experimentalDecorators": true,
 		"module": "commonjs",
 		"moduleResolution": "node",
@@ -13,11 +12,11 @@
 		"removeComments": false,
 		"target": "es5"
 	},
-	"files": [
-    "typings/main.d.ts",
-		"src/app.ts"
-	],
+	"compileOnSave": false,
 	"exclude": [
-		"node_modules"
+		"typings/browser.d.ts",
+		"typings/browser",
+		"node_modules",
+		"build"
 	]
 }

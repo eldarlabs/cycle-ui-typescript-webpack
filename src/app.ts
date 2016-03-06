@@ -1,12 +1,10 @@
 //import Cycle from '@cycle/core';
 const Cycle = require('@cycle/core');
-//import {div, label, input, hr, h1, makeDOMDriver} from '@cycle/dom';
-const {div, label, input, hr, h3, makeDOMDriver} = require('@cycle/dom');
-//import { Input, RadioButton } from '@eldarlabs/cycle-ui';
+const {div, h3, makeDOMDriver} = require('@cycle/dom');
 const { Input, RadioButton } = require('@eldarlabs/cycle-ui');
+//TODO: how I want this to import
+// import { Input, RadioButton } from '@eldarlabs/cycle-ui';
 import { Observable } from 'rx';
-//import style from './style';
-const style = require('./style');
 
 function kitchenSinkView(sources) {
   return Observable.just(div([
