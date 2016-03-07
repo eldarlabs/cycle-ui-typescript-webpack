@@ -5,8 +5,10 @@ const { Input, RadioButton } = require('@eldarlabs/cycle-ui');
 //TODO: how I want this to import
 // import { Input, RadioButton } from '@eldarlabs/cycle-ui';
 import { Observable } from 'rx';
+/* tslint:disable: no-unused-variable */
 // style is needed to import CSS from the webpack loader
 const style = require('./style');
+/* tslint:enable */
 
 function kitchenSinkView(sources) {
   return Observable.just(div([
