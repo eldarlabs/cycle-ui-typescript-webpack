@@ -5,6 +5,8 @@ const { Input, RadioButton } = require('@eldarlabs/cycle-ui');
 //TODO: how I want this to import
 // import { Input, RadioButton } from '@eldarlabs/cycle-ui';
 import { Observable } from 'rx';
+// style is needed to import CSS from the webpack loader
+const style = require('./style');
 
 function kitchenSinkView(sources) {
   return Observable.just(div([
