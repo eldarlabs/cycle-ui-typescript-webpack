@@ -1,7 +1,7 @@
 //import Cycle from '@cycle/core';
 const Cycle = require('@cycle/core');
-const {div, h1, h2, h3, makeDOMDriver} = require('@cycle/dom');
-const { Input, RadioButton } = require('@eldarlabs/cycle-ui');
+const {div, input, h1, h2, h3, makeDOMDriver} = require('@cycle/dom');
+const { Input, RadioButton, RadioGroup } = require('@eldarlabs/cycle-ui');
 //TODO: how I want this to import
 // import { Input, RadioButton } from '@eldarlabs/cycle-ui';
 import { Observable } from 'rx';
@@ -18,12 +18,26 @@ function kitchenSinkView(sources) {
     Input(sources).DOM,
     Input(sources, {
         label: `Input: Max Length`,
-        maxLength: 50,
+        maxLength: 10,
     }).DOM,
     RadioButton(sources, {
-      label: 'Radio easy',
-      checked: false,
+      label: 'Radio Single',
+      value: 'RadioSingle',
     }).DOM,
+    RadioGroup(sources, {name: 'radiosRock', value: 'RadioEasy'}, [
+      { label: 'Radio easy', value: 'RadioEasy', },
+      { label: 'Radio is not easy', value: 'RadioHard' }
+      // { RadioButton, { label: 'Radio easy', value: 'RadioEasy', } },
+      // { RadioButton, { label: 'Radio is not easy', value: 'RadioHard', } }
+      // RadioButton(sources, {
+      //   label: 'Radio easy',
+      //   value: 'RadioEasy',
+      // }).DOM,
+      // RadioButton(sources, {
+      //   label: 'Radio is not easy',
+      //   value: 'RadioHard',
+      // }).DOM
+    ]).DOM,
   ]));
 }
 function main(sources) {
