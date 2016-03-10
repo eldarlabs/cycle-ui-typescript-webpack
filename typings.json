@@ -1,5 +1,7 @@
 {
-  "dependencies": {},
+  "dependencies": {
+    "@eldarlabs/cycle-ui": "npm:@eldarlabs/cycle-ui"
+  },
   "ambientDependencies": {
     "node": "github:DefinitelyTyped/DefinitelyTyped/node/node.d.ts#48c1e3c1d6baefa4f1a126f188c27c4fefd36bff",
     "rx": "https://raw.githubusercontent.com/Reactive-Extensions/RxJS/a1f10de40007e360d556e6efae5ac7e7af2b4b62/ts/rx.d.ts"
