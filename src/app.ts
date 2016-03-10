@@ -1,7 +1,7 @@
 //import Cycle from '@cycle/core';
 const Cycle = require('@cycle/core');
 const { h1, h2, h3, makeDOMDriver } = require('@cycle/dom');
-import { App, Input, RadioButton, RadioGroup } from '@eldarlabs/cycle-ui';
+import { App, Button, Input, RadioButton, RadioGroup } from '@eldarlabs/cycle-ui';
 import { Observable } from 'rx';
 /* tslint:disable: no-unused-variable */
 // style is needed to import CSS from the webpack loader
@@ -12,6 +12,9 @@ function kitchenSinkView(sources: Object) {
   return Observable.just(
     App({}, [
       h1('.example', [`Using Cycle-UI - Kitchen Sink`]),
+      Button(sources, {
+        label: 'Buttonlicious',
+      }).DOM,
       h2([`Text Inputs`]),
       h3([`Default Input (no properties)`]),
       Input(sources).DOM,
