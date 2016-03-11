@@ -6,8 +6,6 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
   context: __dirname,
   devtool: 'eval-source-map',
-  //Switch loaders to debug mode
-  debug: true,
 
   entry: {
     app: [
