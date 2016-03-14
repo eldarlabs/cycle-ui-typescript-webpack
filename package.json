@@ -13,7 +13,14 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "cycle-ui"
+    "cycle-ui",
+    "TypeScript",
+    "WebPack",
+    "Cycle.js",
+    "Starter",
+    "Boilerplate",
+    "Reactive",
+    "RxJS"
   ],
   "repository": {
     "type": "git",
