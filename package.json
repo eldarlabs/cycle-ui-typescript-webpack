@@ -1,16 +1,26 @@
 {
   "name": "@eldarlabs/cycle-ui-typescript-webpack",
-  "version": "0.0.1",
+  "version": "0.0.0-semantically-released-after-ci-build",
   "description": "Starter project with Cycle-UI, TypeScript and WebPack",
   "main": "index.ts",
   "scripts": {
+    "commit": "git-cz",
     "tsc": "tsc",
     "typings": "typings",
     "tslint": "tslint",
     "start": "node server.js",
     "build": "webpack --progress --colors --config webpack.production.config.js",
     "clean": "rm -rf build/",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+  },
+  "release": {
+    "verifyConditions": "condition-circle"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
   },
   "keywords": [
     "cycle-ui",
@@ -24,7 +34,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eldarlabs/cycle-ui-typescript-webpack.git"
+    "url": "https://github.com/eldarlabs/cycle-ui-typescript-webpack.git"
   },
   "bugs": {
     "url": "https://github.com/eldarlabs/cycle-ui-typescript-webpack/issues"
@@ -43,13 +53,17 @@
     "rx": "4.1.0"
   },
   "devDependencies": {
+    "commitizen": "2.7.2",
+    "condition-circle": "1.2.0",
     "css-loader": "^0.23.0",
+    "cz-conventional-changelog": "1.1.5",
     "extract-text-webpack-plugin": "^0.9.1",
     "json-loader": "^0.5.4",
     "node-sass": "^3.4.2",
     "path": "^0.11.14",
     "postcss-loader": "^0.8.1",
     "sass-loader": "^3.1.2",
+    "semantic-release": "4.3.5",
     "style-loader": "^0.13.0",
     "toolbox-loader": "0.0.3",
     "ts-loader": "^0.7.2",
@@ -57,6 +71,6 @@
     "typescript": "^1.8.7",
     "typings": "0.7.5",
     "webpack": "^1.10.1",
-    "webpack-dev-server": "^1.7.0"
+    "webpack-dev-server": "1.7.0"
   }
 }
