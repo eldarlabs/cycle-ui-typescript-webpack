@@ -45,7 +45,7 @@
     "@cycle/core": "6.0.0",
     "@cycle/dom": "9.1.0",
     "@cycle/isolate": "1.2.0",
-    "@eldarlabs/cycle-ui": "0.0.4",
+    "@eldarlabs/cycle-ui": "0.0.6",
     "autoprefixer": "6.3.3",
     "classnames": "2.2.3",
     "normalize.css": "3.0.3",
