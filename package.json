@@ -52,7 +52,7 @@
     "rx": "4.1.0"
   },
   "devDependencies": {
-    "commitizen": "2.7.2",
+    "commitizen": "2.7.3",
     "condition-circle": "1.2.0",
     "css-loader": "^0.23.0",
     "cz-conventional-changelog": "1.1.5",
