@@ -1,6 +1,6 @@
 //import Cycle from '@cycle/core';
 const Cycle = require('@cycle/core');
-const { h1, h2, h3, makeDOMDriver } = require('@cycle/dom');
+const { a, h1, h2, h3, h4, p, article, header, section, footer, makeDOMDriver } = require('@cycle/dom');
 import { App, Button, Input, RadioButton, RadioGroup } from '@eldarlabs/cycle-ui';
 import { Observable } from 'rx';
 /* tslint:disable: no-unused-variable */
@@ -8,41 +8,113 @@ import { Observable } from 'rx';
 const style = require('./style');
 /* tslint:enable */
 
+function theHeader() {
+  return [
+    header(`.${style.header}`, [
+      h1('.example', ['Cycle-UI - Demo Site']),
+    ])
+  ];
+}
+
+function blurb() {
+  return [
+    h2(['Kitchen Sink']),
+    p([
+      'Demo site for ',
+      a({
+        'attributes': {
+          'href': 'https://github.com/eldarlabs/cycle-ui'
+        }
+      }, ['Cycle-UI']),
+      ' using ',
+      a({
+        'attributes': {
+          'href': 'https://github.com/eldarlabs/cycle-ui-typescript-webpack'
+        }
+      }, ['cycle-ui-typescript-webpack']),
+      ' starter project.'
+    ])
+  ];
+}
+
+function theButtons(sources: Object) {
+  return [
+    h3(['Buttons']),
+    Button(sources, {
+      label: 'Button Raised',
+      raised: true,
+    }).DOM
+  ];
+}
+
+function theInputs(sources: Object) {
+  return [
+    h3(['Text Inputs']),
+    h4(['Default Input (no properties)']),
+    Input(sources).DOM,
+    Input(sources, {
+        label: 'Input: Max Length',
+        maxLength: 10,
+    }).DOM
+  ];
+}
+
+function theRadios(sources: Object) {
+  return [
+    RadioButton(sources, {
+      label: 'Radio Single',
+      value: 'RadioSingle',
+    }).DOM,
+    RadioGroup(sources, {name: 'radiosRock', value: 'RadioEasy'}, [
+      { label: 'Radio easy', value: 'RadioEasy', },
+      { label: 'Radio is not easy', value: 'RadioHard' }
+      // { RadioButton, { label: 'Radio easy', value: 'RadioEasy', } },
+      // { RadioButton, { label: 'Radio is not easy', value: 'RadioHard', } }
+      // RadioButton(sources, {
+      //   label: 'Radio easy',
+      //   value: 'RadioEasy',
+      // }).DOM,
+      // RadioButton(sources, {
+      //   label: 'Radio is not easy',
+      //   value: 'RadioHard',
+      // }).DOM
+    ]).DOM
+  ];
+}
+
+function theFooter() {
+  return [
+    footer(`.${style.footer}`, [
+      p([
+        '© ',
+        a({
+          'attributes': {
+            'href': 'https://eldarlabs.com'
+          }
+        }, [`Eldar Labs`]),
+    ' 2016'])
+    ])
+  ];
+}
+
 function kitchenSinkView(sources: Object) {
   return Observable.just(
     App({}, [
-      h1('.example', [`Using Cycle-UI - Kitchen Sink`]),
-      Button(sources, {
-        label: 'Buttonlicious',
-      }).DOM,
-      h2([`Text Inputs`]),
-      h3([`Default Input (no properties)`]),
-      Input(sources).DOM,
-      Input(sources, {
-          label: `Input: Max Length`,
-          maxLength: 10,
-      }).DOM,
-      RadioButton(sources, {
-        label: 'Radio Single',
-        value: 'RadioSingle',
-      }).DOM,
-      RadioGroup(sources, {name: 'radiosRock', value: 'RadioEasy'}, [
-        { label: 'Radio easy', value: 'RadioEasy', },
-        { label: 'Radio is not easy', value: 'RadioHard' }
-        // { RadioButton, { label: 'Radio easy', value: 'RadioEasy', } },
-        // { RadioButton, { label: 'Radio is not easy', value: 'RadioHard', } }
-        // RadioButton(sources, {
-        //   label: 'Radio easy',
-        //   value: 'RadioEasy',
-        // }).DOM,
-        // RadioButton(sources, {
-        //   label: 'Radio is not easy',
-        //   value: 'RadioHard',
-        // }).DOM
-      ]).DOM
+      article([
+        theHeader(),
+        section(`.${style.content}`, [
+          blurb(),
+          h2(['Controls']),
+          theButtons(sources),
+          theInputs(sources),
+          theRadios(sources)
+        ]),
+        theFooter()
+      ])
     ]).DOM
   );
 }
+
 function main(sources) {
   return {
     DOM: kitchenSinkView(sources)

@@ -1,5 +1,70 @@
 @import "~react-toolbox/lib/commons";
+@import "./config";
+
+$content-offset: 4.8 * $unit;
+$content-width: 740px;
+
+$hero-gradient-dark: $color-primary-dark;
+$hero-gradient-light: $color-primary-light;
+$hero-text-color: $color-primary-contrast;
+$hero-max-width: 62 * $unit;
+
+.header {
+  padding: 0 calc((100% - #{$hero-max-width}) / 2);
+  color: $hero-text-color;
+  text-align: center;
+  background: linear-gradient(45deg, $hero-gradient-dark 0%, $hero-gradient-light 100%);
+  background-position: top right;
+  background-size: 120%;
+}
 
 .content {
-  padding: $unit;
+  //display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: $content-offset;
+  background-color: $color-content;
+
+  flex-wrap: wrap;
+  &:nth-child(3) {
+    background-color: darken($color-content, 5%);
+  }
+  > p {
+    max-width: $content-width;
+    margin-bottom: $content-offset;
+    font-size: 1.8 * $unit;
+    line-height: 1.5;
+    text-align: justify;
+    opacity: .6;
+  }
+  > h2 {
+    margin-bottom: $content-offset;
+    font-size: 2 * $unit;
+    color: $hero-gradient-dark;
+  }
+  > h3 {
+    margin-bottom: $content-offset / 2;
+    font-size: 2.4 * $unit;
+    color: $color-primary-dark;
+  }
+}
+
+.footer {
+  padding: 2 * $unit 0;
+  color: $color-content;
+  text-align: center;
+  background-color: $color-text;
+}
+
+@media all and (max-width: 768px) {
+  .content {
+    padding: $content-offset / 2;
+    > p {
+      max-width: 100%;
+    }
+  }
+
+  .second-content {
+    background-color: transparent;
+  }
 }
