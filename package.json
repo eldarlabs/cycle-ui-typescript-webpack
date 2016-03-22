@@ -9,7 +9,8 @@
     "typings": "typings",
     "tslint": "tslint",
     "start": "node server.js",
-    "build": "webpack --progress --colors --config webpack.production.config.js",
+    "build": "env=prod webpack --progress --colors --config webpack.config.js",
+    "stage": "env=stage webpack --progress --colors --config webpack.config.js",
     "clean": "rm -rf build/",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
@@ -57,6 +58,7 @@
     "css-loader": "^0.23.0",
     "cz-conventional-changelog": "1.1.5",
     "extract-text-webpack-plugin": "^0.9.1",
+    "html-webpack-plugin": "2.12.0",
     "json-loader": "^0.5.4",
     "node-sass": "^3.4.2",
     "path": "^0.11.14",
@@ -70,6 +72,7 @@
     "typescript": "^1.8.7",
     "typings": "0.7.5",
     "webpack": "^1.10.1",
+    "webpack-config": "4.0.0",
     "webpack-dev-server": "1.7.0"
   }
 }
