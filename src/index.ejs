@@ -5,10 +5,13 @@
     <title>Cycle-UI Starter</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
-    <link rel="stylesheet" href="/build/root.css">
+    <link rel="stylesheet" href="root.css">
   </head>
   <body>
     <div id="app"></div>
-    <script src="/build/bundle.js"></script>
+    <% for (var chunk in htmlWebpackPlugin.files.chunks) {
+    %> <script src="<%= htmlWebpackPlugin.files.chunks[chunk].entry %>"></script> <% } %>
+    <% if (htmlWebpackPlugin.options.devServer) {
+    %> <script src="<%= htmlWebpackPlugin.options.devServer%>/webpack-dev-server.js"></script> <% } %>
   </body>
 </html>
