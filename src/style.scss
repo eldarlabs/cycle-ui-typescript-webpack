@@ -56,6 +56,10 @@ $hero-max-width: 62 * $unit;
   background-color: $color-text;
 }
 
+[data-cycle-ui="card"] {
+  margin-bottom: $content-offset;
+}
+
 @media all and (max-width: 768px) {
   .content {
     padding: $content-offset / 2;

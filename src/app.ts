@@ -1,7 +1,7 @@
 //import Cycle from '@cycle/core';
 const Cycle = require('@cycle/core');
 const { a, h1, h2, h3, h4, p, article, header, section, footer, makeDOMDriver } = require('@cycle/dom');
-import { App, Button, Input, RadioButton, RadioGroup } from '@eldarlabs/cycle-ui';
+import { App, Button, Card, Input, RadioButton, RadioGroup } from '@eldarlabs/cycle-ui';
 import { Observable } from 'rx';
 /* tslint:disable: no-unused-variable */
 // style is needed to import CSS from the webpack loader
@@ -39,45 +39,52 @@ function blurb() {
 
 function theButtons(sources: Object) {
   return [
-    h3(['Buttons']),
-    Button(sources, {
-      label: 'Button Raised',
-      raised: true,
-    }).DOM
+    Card(sources, null, [
+      h3(['Buttons']),
+      Button(sources, {
+        label: 'Button Raised',
+        raised: true,
+        width: '60px',
+      }).DOM
+    ]).DOM
   ];
 }
 
 function theInputs(sources: Object) {
   return [
-    h3(['Text Inputs']),
-    h4(['Default Input (no properties)']),
-    Input(sources).DOM,
-    Input(sources, {
-        label: 'Input: Max Length',
-        maxLength: 10,
-    }).DOM
+    Card(sources, null, [
+      h3(['Text Inputs']),
+      h4(['Default Input (no properties)']),
+      Input(sources).DOM,
+      Input(sources, {
+          label: 'Input: Max Length',
+          maxLength: 10,
+      }).DOM,
+    ]).DOM
   ];
 }
 
 function theRadios(sources: Object) {
   return [
-    RadioButton(sources, {
-      label: 'Radio Single',
-      value: 'RadioSingle',
-    }).DOM,
-    RadioGroup(sources, {name: 'radiosRock', value: 'RadioEasy'}, [
-      { label: 'Radio easy', value: 'RadioEasy', },
-      { label: 'Radio is not easy', value: 'RadioHard' }
-      // { RadioButton, { label: 'Radio easy', value: 'RadioEasy', } },
-      // { RadioButton, { label: 'Radio is not easy', value: 'RadioHard', } }
-      // RadioButton(sources, {
-      //   label: 'Radio easy',
-      //   value: 'RadioEasy',
-      // }).DOM,
-      // RadioButton(sources, {
-      //   label: 'Radio is not easy',
-      //   value: 'RadioHard',
-      // }).DOM
+    Card(sources, null, [
+      RadioButton(sources, {
+        label: 'Radio Single',
+        value: 'RadioSingle',
+      }).DOM,
+      RadioGroup(sources, {name: 'radiosRock', value: 'RadioEasy'}, [
+        { label: 'Radio easy', value: 'RadioEasy', },
+        { label: 'Radio is not easy', value: 'RadioHard' }
+        // { RadioButton, { label: 'Radio easy', value: 'RadioEasy', } },
+        // { RadioButton, { label: 'Radio is not easy', value: 'RadioHard', } }
+        // RadioButton(sources, {
+        //   label: 'Radio easy',
+        //   value: 'RadioEasy',
+        // }).DOM,
+        // RadioButton(sources, {
+        //   label: 'Radio is not easy',
+        //   value: 'RadioHard',
+        // }).DOM
+      ]).DOM
     ]).DOM
   ];
 }
