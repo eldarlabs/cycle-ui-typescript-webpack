@@ -2,7 +2,19 @@
   "name": "@eldarlabs/cycle-ui-typescript-webpack",
   "version": "0.0.0-semantically-released-after-ci-build",
   "description": "Starter project with Cycle-UI, TypeScript and WebPack",
+  "author": "Eldar Labs (https://eldarlabs.com)",
+  "license": "MIT",
   "main": "index.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eldarlabs/cycle-ui-typescript-webpack.git"
+  },
+  "bugs": {
+    "url": "https://github.com/eldarlabs/cycle-ui-typescript-webpack/issues"
+  },
   "scripts": {
     "commit": "git-cz",
     "tsc": "tsc",
@@ -32,15 +44,6 @@
     "Reactive",
     "RxJS"
   ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/eldarlabs/cycle-ui-typescript-webpack.git"
-  },
-  "bugs": {
-    "url": "https://github.com/eldarlabs/cycle-ui-typescript-webpack/issues"
-  },
-  "author": "Eldar Labs (https://eldarlabs.com)",
-  "license": "MIT",
   "dependencies": {
     "@cycle/core": "6.0.0",
     "@cycle/dom": "9.1.0",
