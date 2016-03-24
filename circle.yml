@@ -6,3 +6,10 @@ test:
     - npm test
   post:
     - npm run semantic-release || true
+deployment:
+  staging:
+    branch: master
+    commands:
+      - npm run clean
+      - npm run stage # build unminified site to build directory
+      - ./scripts/deploy-ghpages.sh build

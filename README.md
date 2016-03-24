@@ -1,14 +1,17 @@
 eldarlabs/cycle-ui-typescript-webpack
 ====
 
-A Cycle.js Starter and Kitchen Sink demo to showcase the Cycle-UI Material Design component library. Uses TypeScript and WebPack.
+[**Demonstration Site **](http://eldarlabs.github.io/cycle-ui-typescript-webpack/)
+
+A Cycle.js Starter and Kitchen Sink demo to showcase the Cycle-UI component library. The current theme is based on Material Design, but may later use adapters to allow other themes. The project uses TypeScript and WebPack.
 
 How to use
 ----------
 
   1. Clone this repository
-  2. Run `npm install && npm start`
-  3. Open `localhost:3000` in your browser
+  2. Run `npm install' which has a postinstall to run `typings install`
+  4. `npm start`
+  5. Open `localhost:3000` in your browser
 
 
 Related projects

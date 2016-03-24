@@ -16,6 +16,7 @@
     "url": "https://github.com/eldarlabs/cycle-ui-typescript-webpack/issues"
   },
   "scripts": {
+    "postinstall": "typings install",
     "commit": "git-cz",
     "tsc": "tsc",
     "typings": "typings",
@@ -36,13 +37,13 @@
   },
   "keywords": [
     "cycle-ui",
-    "TypeScript",
-    "WebPack",
-    "Cycle.js",
-    "Starter",
-    "Boilerplate",
-    "Reactive",
-    "RxJS"
+    "typescript",
+    "webpack",
+    "cycle.js",
+    "starter-kit",
+    "boilerplate",
+    "reactive",
+    "rxjs"
   ],
   "dependencies": {
     "@cycle/core": "6.0.0",
