@@ -1,7 +1,7 @@
 eldarlabs/cycle-ui-typescript-webpack
 ====
 
-[**Demonstration Site **](http://eldarlabs.github.io/cycle-ui-typescript-webpack/)
+##[Demonstration Site](http://eldarlabs.github.io/cycle-ui-typescript-webpack/)
 
 A Cycle.js Starter and Kitchen Sink demo to showcase the Cycle-UI component library. The current theme is based on Material Design, but may later use adapters to allow other themes. The project uses TypeScript and WebPack.
 

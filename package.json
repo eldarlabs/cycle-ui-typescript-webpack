@@ -22,8 +22,8 @@
     "typings": "typings",
     "tslint": "tslint",
     "start": "node server.js",
-    "build": "env=prod webpack --progress --colors --config webpack.config.js",
-    "stage": "env=stage webpack --progress --colors --config webpack.config.js",
+    "build": "NODE_ENV=prod webpack --progress --colors --config webpack.config.js",
+    "stage": "NODE_ENV=stage webpack --progress --colors --config webpack.config.js",
     "clean": "rm -rf build/",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
