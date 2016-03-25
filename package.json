@@ -20,6 +20,7 @@
     "commit": "git-cz",
     "tsc": "tsc",
     "typings": "typings",
+    "typeupdate": "typings install npm:@eldarlabs/cycle-ui",
     "tslint": "tslint",
     "start": "node server.js",
     "build": "NODE_ENV=prod webpack --progress --colors --config webpack.config.js",
@@ -46,15 +47,15 @@
     "rxjs"
   ],
   "dependencies": {
-    "@cycle/core": "6.0.0",
-    "@cycle/dom": "9.1.0",
+    "@cycle/core": "^6.0.0",
+    "@cycle/dom": "^9.1.0",
     "@cycle/isolate": "1.2.0",
-    "@eldarlabs/cycle-ui": "0.1.0",
-    "autoprefixer": "6.3.4",
-    "classnames": "2.2.3",
-    "normalize.css": "3.0.3",
+    "@eldarlabs/cycle-ui": "0.2.0",
+    "autoprefixer": "^6.3.4",
+    "classnames": "^2.2.3",
+    "normalize.css": "^3.0.3",
     "react-toolbox": "0.14.0",
-    "rx": "4.1.0"
+    "rx": "^4.1.0"
   },
   "devDependencies": {
     "commitizen": "2.7.3",
@@ -71,12 +72,12 @@
     "semantic-release": "4.3.5",
     "style-loader": "^0.13.0",
     "toolbox-loader": "0.0.3",
-    "ts-loader": "^0.7.2",
+    "ts-loader": "^0.8.1",
     "tslint": "^3.5.0",
     "typescript": "^1.8.7",
-    "typings": "0.7.5",
+    "typings": "0.7.9",
     "webpack": "^1.10.1",
     "webpack-config": "4.0.0",
-    "webpack-dev-server": "1.7.0"
+    "webpack-dev-server": "1.14.1"
   }
 }

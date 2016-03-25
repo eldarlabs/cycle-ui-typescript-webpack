@@ -1,7 +1,7 @@
 //import Cycle from '@cycle/core';
 const Cycle = require('@cycle/core');
 const { a, h1, h2, h3, h4, p, article, header, section, footer, makeDOMDriver } = require('@cycle/dom');
-import { App, Button, Card, Input, RadioButton, RadioGroup } from '@eldarlabs/cycle-ui';
+import { App, Button, Card, CardTitle, Input, RadioButton, RadioGroup } from '@eldarlabs/cycle-ui';
 import { Observable } from 'rx';
 /* tslint:disable: no-unused-variable */
 // style is needed to import CSS from the webpack loader
@@ -40,7 +40,7 @@ function blurb() {
 function theButtons(sources: Object) {
   return [
     Card(sources, null, [
-      h3(['Buttons']),
+      CardTitle(sources, { title: 'Buttons' } ).DOM,
       Button(sources, {
         label: 'Button Raised',
         raised: true,
@@ -53,7 +53,7 @@ function theButtons(sources: Object) {
 function theInputs(sources: Object) {
   return [
     Card(sources, null, [
-      h3(['Text Inputs']),
+      CardTitle(sources, { title: 'Text Inputs' } ).DOM,
       h4(['Default Input (no properties)']),
       Input(sources).DOM,
       Input(sources, {
@@ -67,6 +67,7 @@ function theInputs(sources: Object) {
 function theRadios(sources: Object) {
   return [
     Card(sources, null, [
+      CardTitle(sources, { title: 'Radios' } ).DOM,
       RadioButton(sources, {
         label: 'Radio Single',
         value: 'RadioSingle',
