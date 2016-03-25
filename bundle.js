@@ -44,7 +44,7 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(85);
+	module.exports = __webpack_require__(86);
 
 
 /***/ },
@@ -12440,7 +12440,7 @@
 	
 	}.call(this));
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(28)(module), (function() { return this; }()), __webpack_require__(86)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(28)(module), (function() { return this; }()), __webpack_require__(87)))
 
 /***/ },
 /* 2 */
@@ -12602,7 +12602,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var lodash_1 = __webpack_require__(78);
+	var lodash_1 = __webpack_require__(80);
 	var rx_1 = __webpack_require__(1);
 	function defaultProps(props, defaultProps) {
 	    // TODO: possibly get functional and use Maybe?
@@ -12620,19 +12620,6 @@
 
 /***/ },
 /* 5 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var version = __webpack_require__(10)
-	
-	module.exports = isVirtualNode
-	
-	function isVirtualNode(x) {
-	    return x && x.type === "VirtualNode" && x.version === version
-	}
-
-
-/***/ },
-/* 6 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -12716,7 +12703,7 @@
 	module.exports = isolate;
 
 /***/ },
-/* 7 */
+/* 6 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -12767,6 +12754,19 @@
 			window.classNames = classNames;
 		}
 	}());
+
+
+/***/ },
+/* 7 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var version = __webpack_require__(10)
+	
+	module.exports = isVirtualNode
+	
+	function isVirtualNode(x) {
+	    return x && x.type === "VirtualNode" && x.version === version
+	}
 
 
 /***/ },
@@ -12838,7 +12838,7 @@
 	
 	var VNode = __webpack_require__(14);
 	var VText = __webpack_require__(25);
-	var isVNode = __webpack_require__(5);
+	var isVNode = __webpack_require__(7);
 	var isVText = __webpack_require__(9);
 	var isWidget = __webpack_require__(3);
 	var isHook = __webpack_require__(11);
@@ -12969,7 +12969,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	var version = __webpack_require__(10)
-	var isVNode = __webpack_require__(5)
+	var isVNode = __webpack_require__(7)
 	var isWidget = __webpack_require__(3)
 	var isThunk = __webpack_require__(8)
 	var isVHook = __webpack_require__(11)
@@ -13176,7 +13176,7 @@
 
 	/* WEBPACK VAR INJECTION */(function(global) {var topLevel = typeof global !== 'undefined' ? global :
 	    typeof window !== 'undefined' ? window : {}
-	var minDoc = __webpack_require__(87);
+	var minDoc = __webpack_require__(88);
 	
 	if (typeof document !== 'undefined') {
 	    module.exports = document;
@@ -13374,7 +13374,7 @@
 /* 23 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var isVNode = __webpack_require__(5)
+	var isVNode = __webpack_require__(7)
 	var isVText = __webpack_require__(9)
 	var isWidget = __webpack_require__(3)
 	var isThunk = __webpack_require__(8)
@@ -13467,12 +13467,12 @@
 	"use strict";
 	var rx_1 = __webpack_require__(1);
 	var _a = __webpack_require__(2), div = _a.div, input = _a.input, label = _a.label, span = _a.span;
-	var classNames = __webpack_require__(7);
-	var Radio_1 = __webpack_require__(76);
+	var classNames = __webpack_require__(6);
+	var Radio_1 = __webpack_require__(77);
 	var style = __webpack_require__(15);
 	var defaultProps_1 = __webpack_require__(4);
-	var isolate = __webpack_require__(6);
-	var combineLatestObj = __webpack_require__(79);
+	var isolate = __webpack_require__(5);
+	var combineLatestObj = __webpack_require__(81);
 	;
 	function RadioButton(sources, props) {
 	    var props$ = defaultProps_1.defaultProps(props, {
@@ -13549,14 +13549,10 @@
 
 /***/ },
 /* 27 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
-	"use strict";
-	var RadioButton_1 = __webpack_require__(26);
-	exports.RadioButton = RadioButton_1.RadioButton;
-	var RadioGroup_1 = __webpack_require__(77);
-	exports.RadioGroup = RadioGroup_1.RadioGroup;
-	//# sourceMappingURL=index.js.map
+	// removed by extract-text-webpack-plugin
+	module.exports = {"card":"style__card___1QRTe","raised":"style__raised___2Ez1d","cardMedia":"style__cardMedia___15JYX","wide":"style__wide___28VO6","square":"style__square___332oC","content":"style__content___3sWYq","contentOverlay":"style__contentOverlay___28Ac_","cardTitle":"style__cardTitle___3ARve","cardActions":"style__cardActions___3_Q_z","cardText":"style__cardText___KU5Pg","avatar":"style__avatar___3I7Nb","subtitle":"style__subtitle___3EyZV","large":"style__large___YMxZr","title":"style__title___3l_ej","small":"style__small___x2vFl"};
 
 /***/ },
 /* 28 */
@@ -15117,7 +15113,7 @@
 
 	var escape = __webpack_require__(17);
 	var extend = __webpack_require__(48);
-	var isVNode = __webpack_require__(5);
+	var isVNode = __webpack_require__(7);
 	var isVText = __webpack_require__(9);
 	var isThunk = __webpack_require__(8);
 	var isWidget = __webpack_require__(3);
@@ -15790,7 +15786,7 @@
 	
 	var applyProperties = __webpack_require__(20)
 	
-	var isVNode = __webpack_require__(5)
+	var isVNode = __webpack_require__(7)
 	var isVText = __webpack_require__(9)
 	var isWidget = __webpack_require__(3)
 	var handleThunk = __webpack_require__(23)
@@ -16672,7 +16668,7 @@
 	var isArray = __webpack_require__(12)
 	
 	var VPatch = __webpack_require__(24)
-	var isVNode = __webpack_require__(5)
+	var isVNode = __webpack_require__(7)
 	var isVText = __webpack_require__(9)
 	var isWidget = __webpack_require__(3)
 	var isThunk = __webpack_require__(8)
@@ -17104,8 +17100,8 @@
 
 	"use strict";
 	var div = __webpack_require__(2).div;
-	var classNames = __webpack_require__(7);
-	var style = __webpack_require__(80);
+	var classNames = __webpack_require__(6);
+	var style = __webpack_require__(82);
 	var defaultProps_1 = __webpack_require__(4);
 	function App(props, children) {
 	    var props$ = defaultProps_1.defaultProps(props, {
@@ -17142,10 +17138,10 @@
 
 	"use strict";
 	var _a = __webpack_require__(2), h = _a.h, span = _a.span;
-	var style = __webpack_require__(81);
+	var style = __webpack_require__(83);
 	var defaultProps_1 = __webpack_require__(4);
-	var isolate = __webpack_require__(6);
-	var classNames = __webpack_require__(7);
+	var isolate = __webpack_require__(5);
+	var classNames = __webpack_require__(6);
 	;
 	function Button(sources, props, children) {
 	    var props$ = defaultProps_1.defaultProps(props, {
@@ -17207,10 +17203,10 @@
 
 	"use strict";
 	var div = __webpack_require__(2).div;
-	var style = __webpack_require__(82);
+	var style = __webpack_require__(27);
 	var defaultProps_1 = __webpack_require__(4);
-	var isolate = __webpack_require__(6);
-	var classNames = __webpack_require__(7);
+	var isolate = __webpack_require__(5);
+	var classNames = __webpack_require__(6);
 	;
 	function Card(sources, props, children) {
 	    var props$ = defaultProps_1.defaultProps(props, {
@@ -17249,16 +17245,72 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var Card_1 = __webpack_require__(71);
-	exports.Card = Card_1.Card;
-	// export CardActions from './CardActions';
-	// export CardMedia from './CardMedia';
-	// export CardText from './CardText';
-	// export CardTitle from './CardTitle';
-	//# sourceMappingURL=index.js.map
+	var _a = __webpack_require__(2), div = _a.div, h5 = _a.h5, p = _a.p;
+	var style = __webpack_require__(27);
+	var defaultProps_1 = __webpack_require__(4);
+	var isolate = __webpack_require__(5);
+	var classNames = __webpack_require__(6);
+	;
+	function CardTitle(sources, props, children) {
+	    var props$ = defaultProps_1.defaultProps(props, {
+	        className: '',
+	    });
+	    // TODO: isolation?
+	    return isolate(makeCardTitle)(sources, props$, children);
+	}
+	exports.CardTitle = CardTitle;
+	function makeCardTitle(sources, props$, children) {
+	    var vtree$ = props$.map(function (props) {
+	        //TODO: do Avatars at some point
+	        //let avatarComponent;
+	        // if (typeof avatar === 'string') {
+	        //   avatarComponent = <Avatar image={avatar} />;
+	        // } else {
+	        //   avatarComponent = avatar;
+	        // }
+	        var className = classNames(style.cardTitle, {}, props.className);
+	        var titleDOM = props.title &&
+	            h5("." + style.title, [props.title]);
+	        var childrenAsStringDOM = props.children && typeof props.children === 'string' &&
+	            h5("." + style.title, [props.children]);
+	        var subtitleDOM = props.subtitle &&
+	            p("." + style.subtitle, [props.subtitle]);
+	        var childrenAsArray = props.children && typeof children !== 'string' &&
+	            [children];
+	        return (div({
+	            className: className,
+	        }, 
+	        //TODO: Avatars
+	        // {avatarComponent && (
+	        //   <div className={style.avatar}>
+	        //     {avatarComponent}
+	        //   </div>
+	        // )}
+	        div(titleDOM, childrenAsStringDOM, subtitleDOM, childrenAsArray)));
+	    });
+	    return {
+	        DOM: vtree$,
+	    };
+	}
+	;
+	//# sourceMappingURL=CardTitle.js.map
 
 /***/ },
 /* 73 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	var Card_1 = __webpack_require__(71);
+	exports.Card = Card_1.Card;
+	// export { CardActions } from './CardActions';
+	// export { CardMedia } from './CardMedia';
+	// export { CardText } from './CardText';
+	var CardTitle_1 = __webpack_require__(72);
+	exports.CardTitle = CardTitle_1.CardTitle;
+	//# sourceMappingURL=index.js.map
+
+/***/ },
+/* 74 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -17269,28 +17321,28 @@
 	exports.App = index_1.App;
 	var index_2 = __webpack_require__(70);
 	exports.Button = index_2.Button;
-	var index_3 = __webpack_require__(72);
+	var index_3 = __webpack_require__(73);
 	exports.Card = index_3.Card;
-	var index_4 = __webpack_require__(75);
+	exports.CardTitle = index_3.CardTitle;
+	var index_4 = __webpack_require__(76);
 	exports.Input = index_4.Input;
-	var index_5 = __webpack_require__(27);
+	var index_5 = __webpack_require__(79);
 	exports.RadioButton = index_5.RadioButton;
-	var index_6 = __webpack_require__(27);
-	exports.RadioGroup = index_6.RadioGroup;
+	exports.RadioGroup = index_5.RadioGroup;
 	//# sourceMappingURL=index.js.map
 
 /***/ },
-/* 74 */
+/* 75 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 	var rx_1 = __webpack_require__(1);
 	var _a = __webpack_require__(2), h = _a.h, div = _a.div, span = _a.span, label = _a.label;
-	var classNames = __webpack_require__(7);
+	var classNames = __webpack_require__(6);
 	// import FontIcon from '../font_icon';
-	var style = __webpack_require__(83);
+	var style = __webpack_require__(84);
 	var defaultProps_1 = __webpack_require__(4);
-	var isolate = __webpack_require__(6);
+	var isolate = __webpack_require__(5);
 	function Input(sources, props) {
 	    var props$ = defaultProps_1.defaultProps(props, {
 	        className: '',
@@ -17381,23 +17433,23 @@
 	//# sourceMappingURL=Input.js.map
 
 /***/ },
-/* 75 */
+/* 76 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var Input_1 = __webpack_require__(74);
+	var Input_1 = __webpack_require__(75);
 	exports.Input = Input_1.Input;
 	//# sourceMappingURL=index.js.map
 
 /***/ },
-/* 76 */
+/* 77 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 	var div = __webpack_require__(2).div;
 	var style = __webpack_require__(15);
 	var defaultProps_1 = __webpack_require__(4);
-	var isolate = __webpack_require__(6);
+	var isolate = __webpack_require__(5);
 	;
 	function Radio(sources, props) {
 	    //TODO: make defaults or use parents?
@@ -17432,19 +17484,19 @@
 	//# sourceMappingURL=Radio.js.map
 
 /***/ },
-/* 77 */
+/* 78 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 	var rx_1 = __webpack_require__(1);
 	var div = __webpack_require__(2).div;
-	var classNames = __webpack_require__(7);
+	var classNames = __webpack_require__(6);
 	var RadioButton_1 = __webpack_require__(26);
 	/* tslint:disable: no-unused-variable */
 	var style = __webpack_require__(15);
 	/* tslint:enable */
 	var defaultProps_1 = __webpack_require__(4);
-	var isolate = __webpack_require__(6);
+	var isolate = __webpack_require__(5);
 	;
 	function RadioGroup(sources, props, childrenProps) {
 	    //console.log(childrenProps);
@@ -17488,7 +17540,18 @@
 	//# sourceMappingURL=RadioGroup.js.map
 
 /***/ },
-/* 78 */
+/* 79 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	var RadioButton_1 = __webpack_require__(26);
+	exports.RadioButton = RadioButton_1.RadioButton;
+	var RadioGroup_1 = __webpack_require__(78);
+	exports.RadioGroup = RadioGroup_1.RadioGroup;
+	//# sourceMappingURL=index.js.map
+
+/***/ },
+/* 80 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(module, global) {/**
@@ -32566,7 +32629,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(28)(module), (function() { return this; }())))
 
 /***/ },
-/* 79 */
+/* 81 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var Rx = __webpack_require__(1);
@@ -32594,53 +32657,46 @@
 
 
 /***/ },
-/* 80 */
+/* 82 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"root":"style__root___20TVI"};
 
 /***/ },
-/* 81 */
+/* 83 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"raised":"style__raised___1YO8U","flat":"style__flat___2UJfS","floating":"style__floating___17YiZ","toggle":"style__toggle___2n01i","icon":"style__icon___2GNOS","mini":"style__mini___JjRxL","neutral":"style__neutral___iXLge","inverse":"style__inverse___2NYEz","primary":"style__primary___2QrZv","accent":"style__accent___3EOvj"};
 
 /***/ },
-/* 82 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-	module.exports = {"card":"style__card___1QRTe","raised":"style__raised___2Ez1d","cardMedia":"style__cardMedia___15JYX","wide":"style__wide___28VO6","square":"style__square___332oC","content":"style__content___3sWYq","contentOverlay":"style__contentOverlay___28Ac_","cardTitle":"style__cardTitle___3ARve","cardActions":"style__cardActions___3_Q_z","cardText":"style__cardText___KU5Pg","avatar":"style__avatar___3I7Nb","subtitle":"style__subtitle___3EyZV","large":"style__large___YMxZr","title":"style__title___3l_ej","small":"style__small___x2vFl"};
-
-/***/ },
-/* 83 */
+/* 84 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"root":"style__root___30_ut","withIcon":"style__withIcon___1Zn72","icon":"style__icon___2xbZ0","input":"style__input___8M-pT","bar":"style__bar___AKK7v","label":"style__label___2yfix","fixed":"style__fixed___3wvEH","filled":"style__filled___-no4o","error":"style__error___2GTiS","counter":"style__counter___FqUV0","disabled":"style__disabled___1ZGN3","errored":"style__errored___1d0B_","hidden":"style__hidden___3bgYx"};
 
 /***/ },
-/* 84 */
+/* 85 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"header":"style__header___8HNRB","content":"style__content___1qhCf","footer":"style__footer___39ppH","second-content":"style__second-content___GSksS"};
 
 /***/ },
-/* 85 */
+/* 86 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 	//import Cycle from '@cycle/core';
 	var Cycle = __webpack_require__(29);
 	var _a = __webpack_require__(2), a = _a.a, h1 = _a.h1, h2 = _a.h2, h3 = _a.h3, h4 = _a.h4, p = _a.p, article = _a.article, header = _a.header, section = _a.section, footer = _a.footer, makeDOMDriver = _a.makeDOMDriver;
-	var cycle_ui_1 = __webpack_require__(73);
+	var cycle_ui_1 = __webpack_require__(74);
 	var rx_1 = __webpack_require__(1);
 	/* tslint:disable: no-unused-variable */
 	// style is needed to import CSS from the webpack loader
-	var style = __webpack_require__(84);
+	var style = __webpack_require__(85);
 	/* tslint:enable */
 	function theHeader() {
 	    return [
@@ -32672,7 +32728,7 @@
 	function theButtons(sources) {
 	    return [
 	        cycle_ui_1.Card(sources, null, [
-	            h3(['Buttons']),
+	            cycle_ui_1.CardTitle(sources, { title: 'Buttons' }).DOM,
 	            cycle_ui_1.Button(sources, {
 	                label: 'Button Raised',
 	                raised: true,
@@ -32684,7 +32740,7 @@
 	function theInputs(sources) {
 	    return [
 	        cycle_ui_1.Card(sources, null, [
-	            h3(['Text Inputs']),
+	            cycle_ui_1.CardTitle(sources, { title: 'Text Inputs' }).DOM,
 	            h4(['Default Input (no properties)']),
 	            cycle_ui_1.Input(sources).DOM,
 	            cycle_ui_1.Input(sources, {
@@ -32697,6 +32753,7 @@
 	function theRadios(sources) {
 	    return [
 	        cycle_ui_1.Card(sources, null, [
+	            cycle_ui_1.CardTitle(sources, { title: 'Radios' }).DOM,
 	            cycle_ui_1.RadioButton(sources, {
 	                label: 'Radio Single',
 	                value: 'RadioSingle',
@@ -32748,7 +32805,7 @@
 
 
 /***/ },
-/* 86 */
+/* 87 */
 /***/ function(module, exports) {
 
 	// shim for using process in browser
@@ -32845,7 +32902,7 @@
 
 
 /***/ },
-/* 87 */
+/* 88 */
 /***/ function(module, exports) {
 
 	/* (ignored) */
