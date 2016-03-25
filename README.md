@@ -1,5 +1,8 @@
 eldarlabs/cycle-ui-typescript-webpack
 ====
+[![circleci build](https://circleci.com/gh/eldarlabs/cycle-ui-typescript-webpack.svg?style=shield)](https://circleci.com/gh/eldarlabs/cycle-ui-typescript-webpack)
+[![MIT License](https://img.shields.io/npm/l/starwars-names.svg)](https://raw.githubusercontent.com/eldarlabs/cycle-ui-typescript-webpack/master/LICENSE)
+[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
 ##[Demonstration Site](http://eldarlabs.github.io/cycle-ui-typescript-webpack/)
 
