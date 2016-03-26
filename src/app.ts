@@ -1,7 +1,9 @@
 //import Cycle from '@cycle/core';
 const Cycle = require('@cycle/core');
-const { a, h1, h2, h3, h4, p, article, header, section, footer, makeDOMDriver } = require('@cycle/dom');
-import { App, Button, Card, CardTitle, Input, RadioButton, RadioGroup } from '@eldarlabs/cycle-ui';
+const { a, h1, h2, h4, p, article, header, section, footer, makeDOMDriver }
+  = require('@cycle/dom');
+import { App, Button, Card, CardTitle, CardText, CardActions, Input,
+  RadioButton, RadioGroup } from '@eldarlabs/cycle-ui';
 import { Observable } from 'rx';
 /* tslint:disable: no-unused-variable */
 // style is needed to import CSS from the webpack loader
@@ -41,11 +43,15 @@ function theButtons(sources: Object) {
   return [
     Card(sources, null, [
       CardTitle(sources, { title: 'Buttons' } ).DOM,
-      Button(sources, {
-        label: 'Button Raised',
-        raised: true,
-        width: '60px',
-      }).DOM
+      CardActions(sources, null, [
+        Button(sources, {
+          label: 'Button',
+        }).DOM,
+        Button(sources, {
+          label: 'Button Raised',
+          raised: true,
+        }).DOM,
+      ]).DOM
     ]).DOM
   ];
 }
@@ -54,12 +60,14 @@ function theInputs(sources: Object) {
   return [
     Card(sources, null, [
       CardTitle(sources, { title: 'Text Inputs' } ).DOM,
-      h4(['Default Input (no properties)']),
-      Input(sources).DOM,
-      Input(sources, {
-          label: 'Input: Max Length',
-          maxLength: 10,
-      }).DOM,
+      CardText(sources, null, [
+        h4(['Default Input (no properties)']),
+        Input(sources).DOM,
+        Input(sources, {
+            label: 'Input: Max Length',
+            maxLength: 10,
+        }).DOM,
+      ]).DOM,
     ]).DOM
   ];
 }
@@ -68,23 +76,25 @@ function theRadios(sources: Object) {
   return [
     Card(sources, null, [
       CardTitle(sources, { title: 'Radios' } ).DOM,
-      RadioButton(sources, {
-        label: 'Radio Single',
-        value: 'RadioSingle',
-      }).DOM,
-      RadioGroup(sources, {name: 'radiosRock', value: 'RadioEasy'}, [
-        { label: 'Radio easy', value: 'RadioEasy', },
-        { label: 'Radio is not easy', value: 'RadioHard' }
-        // { RadioButton, { label: 'Radio easy', value: 'RadioEasy', } },
-        // { RadioButton, { label: 'Radio is not easy', value: 'RadioHard', } }
-        // RadioButton(sources, {
-        //   label: 'Radio easy',
-        //   value: 'RadioEasy',
-        // }).DOM,
-        // RadioButton(sources, {
-        //   label: 'Radio is not easy',
-        //   value: 'RadioHard',
-        // }).DOM
+      CardActions(sources, null, [
+        RadioButton(sources, {
+          label: 'Radio Single',
+          value: 'RadioSingle',
+        }).DOM,
+        RadioGroup(sources, {name: 'radiosRock', value: 'RadioEasy'}, [
+          { label: 'Radio easy', value: 'RadioEasy', },
+          { label: 'Radio is not easy', value: 'RadioHard' }
+          // { RadioButton, { label: 'Radio easy', value: 'RadioEasy', } },
+          // { RadioButton, { label: 'Radio is not easy', value: 'RadioHard', } }
+          // RadioButton(sources, {
+          //   label: 'Radio easy',
+          //   value: 'RadioEasy',
+          // }).DOM,
+          // RadioButton(sources, {
+          //   label: 'Radio is not easy',
+          //   value: 'RadioHard',
+          // }).DOM
+        ]).DOM,
       ]).DOM
     ]).DOM
   ];
