@@ -17335,11 +17335,11 @@
 	        var className = classNames(style.cardTitle, {}, props.className);
 	        var titleDOM = props.title &&
 	            h5("." + style.title, [props.title]);
-	        var childrenAsStringDOM = props.children && typeof props.children === 'string' &&
-	            h5("." + style.title, [props.children]);
+	        var childrenAsStringDOM = children && typeof children === 'string' &&
+	            h5("." + style.title, [children]);
 	        var subtitleDOM = props.subtitle &&
 	            p("." + style.subtitle, [props.subtitle]);
-	        var childrenAsArray = props.children && typeof children !== 'string' &&
+	        var childrenAsArray = children && typeof children !== 'string' &&
 	            [children];
 	        return (div({
 	            className: className,
@@ -17433,7 +17433,8 @@
 	            // TODO: use input or some other event. react-toolbox seems to use change
 	            // but that does not update the count for max length as you type
 	            // TODO: use a better selector
-	            newValues$ = DOM.select('input').events('input').map(function (ev) { return ev.target.value; });
+	            newValues$ = DOM.select('input').events('input').
+	                map(function (ev) { return ev.target.value; });
 	        }
 	        else {
 	            newValues$ = props.values;
@@ -17567,7 +17568,6 @@
 	var isolate = __webpack_require__(4);
 	;
 	function RadioGroup(sources, props, childrenProps) {
-	    //console.log(childrenProps);
 	    var props$ = defaultProps_1.defaultProps(props, {
 	        className: '',
 	        disabled: false,
@@ -17583,7 +17583,8 @@
 	        var childProps = childrenProps_1[_i];
 	        //console.log('child' + childProps);
 	        var childRadio = RadioButton_1.RadioButton(sources, childProps);
-	        //TODO: maybe remove RadioButton interface if I can make value$ compile using CycleDomComponent interface
+	        // TODO: maybe remove RadioButton interface if I can make value$ compile using CycleDomComponent
+	        // interface
 	        childrenValues.push(childRadio.value$);
 	        childrenDOMs.push(childRadio.DOM);
 	    }
