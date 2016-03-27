@@ -133,7 +133,7 @@ function kitchenSinkView(sources: Object) {
   );
 }
 
-function main(sources) {
+function main(sources: any) {
   return {
     DOM: kitchenSinkView(sources)
   };
