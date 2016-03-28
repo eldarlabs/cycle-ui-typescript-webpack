@@ -32760,7 +32760,7 @@
 	"use strict";
 	//import Cycle from '@cycle/core';
 	var Cycle = __webpack_require__(29);
-	var _a = __webpack_require__(2), a = _a.a, h1 = _a.h1, h2 = _a.h2, h4 = _a.h4, p = _a.p, article = _a.article, header = _a.header, section = _a.section, footer = _a.footer, makeDOMDriver = _a.makeDOMDriver;
+	var _a = __webpack_require__(2), a = _a.a, h1 = _a.h1, h2 = _a.h2, h3 = _a.h3, h4 = _a.h4, h5 = _a.h5, h6 = _a.h6, p = _a.p, article = _a.article, header = _a.header, section = _a.section, footer = _a.footer, makeDOMDriver = _a.makeDOMDriver;
 	var cycle_ui_1 = __webpack_require__(76);
 	var rx_1 = __webpack_require__(1);
 	/* tslint:disable: no-unused-variable */
@@ -32842,6 +32842,21 @@
 	        ]).DOM
 	    ];
 	}
+	function theHeadings(sources) {
+	    return [
+	        cycle_ui_1.Card(sources, null, [
+	            cycle_ui_1.CardTitle(sources, { title: 'Headings' }).DOM,
+	            cycle_ui_1.CardText(sources, null, [
+	                h1(['Heading 1']),
+	                h2(['Heading 2']),
+	                h3(['Heading 3']),
+	                h4(['Heading 4']),
+	                h5(['Heading 5']),
+	                h6(['Heading 6']),
+	            ]).DOM,
+	        ]).DOM
+	    ];
+	}
 	function theFooter() {
 	    return [
 	        footer("." + style.footer, [
@@ -32865,7 +32880,8 @@
 	                h2(['Controls']),
 	                theButtons(sources),
 	                theInputs(sources),
-	                theRadios(sources)
+	                theRadios(sources),
+	                theHeadings(sources),
 	            ]),
 	            theFooter()
 	        ])
