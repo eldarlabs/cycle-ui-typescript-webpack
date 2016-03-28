@@ -1,6 +1,6 @@
 //import Cycle from '@cycle/core';
 const Cycle = require('@cycle/core');
-const { a, h1, h2, h4, p, article, header, section, footer, makeDOMDriver }
+const { a, h1, h2, h3, h4, h5, h6, p, article, header, section, footer, makeDOMDriver }
   = require('@cycle/dom');
 import { App, Button, Card, CardTitle, CardText, CardActions, Input,
   RadioButton, RadioGroup } from '@eldarlabs/cycle-ui';
@@ -100,6 +100,22 @@ function theRadios(sources: Object) {
   ];
 }
 
+function theHeadings(sources: any) {
+  return [
+    Card(sources, null, [
+      CardTitle(sources, { title: 'Headings' } ).DOM,
+      CardText(sources, null, [
+        h1(['Heading 1']),
+        h2(['Heading 2']),
+        h3(['Heading 3']),
+        h4(['Heading 4']),
+        h5(['Heading 5']),
+        h6(['Heading 6']),
+      ]).DOM,
+    ]).DOM
+  ];
+}
+
 function theFooter() {
   return [
     footer(`.${style.footer}`, [
@@ -125,7 +141,8 @@ function kitchenSinkView(sources: Object) {
           h2(['Controls']),
           theButtons(sources),
           theInputs(sources),
-          theRadios(sources)
+          theRadios(sources),
+          theHeadings(sources),
         ]),
         theFooter()
       ])
