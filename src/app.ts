@@ -1,7 +1,11 @@
-//import Cycle from '@cycle/core';
 const Cycle = require('@cycle/core');
-const { a, h1, h2, h3, h4, h5, h6, p, article, header, section, footer, makeDOMDriver }
-  = require('@cycle/dom');
+const { a, h1, h2, h3, h4, h5, h6, p, article, header, section, footer, makeDOMDriver,
+  modules } = require('cycle-snabbdom');
+const {
+  StyleModule, PropsModule,
+  AttrsModule, ClassModule,
+  HeroModule, EventsModule,
+} = modules;
 import { App, Button, Card, CardTitle, CardText, CardActions, Input,
   RadioButton, RadioGroup } from '@eldarlabs/cycle-ui';
 import { Observable } from 'rx';
@@ -11,57 +15,58 @@ const style = require('./style');
 /* tslint:enable */
 
 function theHeader() {
-  return [
+  return (
     header(`.${style.header}`, [
-      h1('.example', ['Cycle-UI - Demo Site']),
+      h1('.example', 'Cycle-UI - Demo Site')
     ])
-  ];
+  );
 }
 
 function blurb() {
-  return [
-    h2(['Kitchen Sink']),
+  return (
+    h2('Kitchen Sink'),
     p([
       'Demo site for ',
       a({
-        'attributes': {
+        'props': {
           'href': 'https://github.com/eldarlabs/cycle-ui'
         }
-      }, ['Cycle-UI']),
+      }, 'Cycle-UI'),
       ' using ',
       a({
-        'attributes': {
+        'props': {
           'href': 'https://github.com/eldarlabs/cycle-ui-typescript-webpack'
         }
-      }, ['cycle-ui-typescript-webpack']),
+      }, 'cycle-ui-typescript-webpack'),
       ' starter project.'
     ])
-  ];
+  );
 }
 
-function theButtons(sources: Object) {
-  return [
+function theButtons(sources: any) {
+  return (
     Card(sources, null, [
-      CardTitle(sources, { title: 'Buttons' } ).DOM,
-      CardActions(sources, null, [
-        Button(sources, {
-          label: 'Button',
-        }).DOM,
-        Button(sources, {
-          label: 'Button Raised',
-          raised: true,
-        }).DOM,
+      CardTitle(sources, { title: 'Buttons' }, [
+        CardActions(sources, null, [
+          Button(sources, {
+            label: 'Button',
+          }).DOM,
+          Button(sources, {
+            label: 'Button Raised',
+            raised: true,
+          }).DOM,
+        ]).DOM
       ]).DOM
     ]).DOM
-  ];
+  );
 }
 
-function theInputs(sources: Object) {
-  return [
+function theInputs(sources: any) {
+  return (
     Card(sources, null, [
       CardTitle(sources, { title: 'Text Inputs' } ).DOM,
       CardText(sources, null, [
-        h4(['Default Input (no properties)']),
+        h4('Default Input (no properties)'),
         Input(sources).DOM,
         Input(sources, {
             label: 'Input: Max Length',
@@ -69,11 +74,11 @@ function theInputs(sources: Object) {
         }).DOM,
       ]).DOM,
     ]).DOM
-  ];
+  );
 }
 
-function theRadios(sources: Object) {
-  return [
+function theRadios(sources: any) {
+  return (
     Card(sources, null, [
       CardTitle(sources, { title: 'Radios' } ).DOM,
       CardActions(sources, null, [
@@ -97,51 +102,52 @@ function theRadios(sources: Object) {
         ]).DOM,
       ]).DOM
     ]).DOM
-  ];
+  );
 }
 
 function theHeadings(sources: any) {
-  return [
+  return (
     Card(sources, null, [
       CardTitle(sources, { title: 'Headings' } ).DOM,
       CardText(sources, null, [
-        h1(['Heading 1']),
-        h2(['Heading 2']),
-        h3(['Heading 3']),
-        h4(['Heading 4']),
-        h5(['Heading 5']),
-        h6(['Heading 6']),
+        h1('Heading 1'),
+        h2('Heading 2'),
+        h3('Heading 3'),
+        h4('Heading 4'),
+        h5('Heading 5'),
+        h6('Heading 6'),
       ]).DOM,
     ]).DOM
-  ];
+  );
 }
 
 function theFooter() {
-  return [
+  return (
     footer(`.${style.footer}`, [
       p([
         '© ',
         a({
-          'attributes': {
+          'props': {
             'href': 'https://eldarlabs.com'
           }
-        }, [`Eldar Labs`]),
-    ' 2016'])
+        }, `Eldar Labs`),
+        ' 2016'])
     ])
-  ];
+  );
 }
 
-function kitchenSinkView(sources: Object) {
+function kitchenSinkView(sources: any) {
   return Observable.just(
     App({}, [
       article([
         theHeader(),
         section(`.${style.content}`, [
           blurb(),
-          h2(['Controls']),
+          h2('Controls'),
           theButtons(sources),
           theInputs(sources),
           theRadios(sources),
+          h2('Styles'),
           theHeadings(sources),
         ]),
         theFooter()
@@ -157,5 +163,11 @@ function main(sources: any) {
 }
 
 Cycle.run(main, {
-  DOM: makeDOMDriver('#app')
+  DOM: makeDOMDriver('#app', {
+    modules: [
+      StyleModule, PropsModule,
+      AttrsModule, ClassModule,
+      HeroModule, EventsModule
+    ]
+  })
 });
