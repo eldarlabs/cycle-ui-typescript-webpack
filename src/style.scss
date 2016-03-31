@@ -9,6 +9,10 @@ $hero-gradient-light: $color-primary-light;
 $hero-text-color: $color-primary-contrast;
 $hero-max-width: 62 * $unit;
 
+a {
+  color: $color-accent;
+}
+
 .header {
   padding: 0 calc((100% - #{$hero-max-width}) / 2);
   color: $hero-text-color;
