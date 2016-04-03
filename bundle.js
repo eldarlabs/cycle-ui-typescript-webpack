@@ -12708,7 +12708,7 @@
 	
 	}.call(this));
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6)(module), (function() { return this; }()), __webpack_require__(93)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6)(module), (function() { return this; }()), __webpack_require__(95)))
 
 /***/ },
 /* 3 */
@@ -33254,10 +33254,28 @@
 
 	"use strict";
 	var Cycle = __webpack_require__(24);
-	var _a = __webpack_require__(1), a = _a.a, h1 = _a.h1, h2 = _a.h2, h3 = _a.h3, h4 = _a.h4, h5 = _a.h5, h6 = _a.h6, p = _a.p, article = _a.article, header = _a.header, section = _a.section, footer = _a.footer, makeDOMDriver = _a.makeDOMDriver, modules = _a.modules;
+	var main_1 = __webpack_require__(94);
+	var _a = __webpack_require__(1), makeDOMDriver = _a.makeDOMDriver, modules = _a.modules;
 	var StyleModule = modules.StyleModule, PropsModule = modules.PropsModule, AttrsModule = modules.AttrsModule, ClassModule = modules.ClassModule, HeroModule = modules.HeroModule, EventsModule = modules.EventsModule;
-	var cycle_ui_1 = __webpack_require__(34);
+	Cycle.run(main_1.main, {
+	    DOM: makeDOMDriver('#app', {
+	        modules: [
+	            StyleModule, PropsModule,
+	            AttrsModule, ClassModule,
+	            HeroModule, EventsModule
+	        ]
+	    })
+	});
+
+
+/***/ },
+/* 93 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
 	var rx_1 = __webpack_require__(2);
+	var _a = __webpack_require__(1), a = _a.a, h1 = _a.h1, h2 = _a.h2, h3 = _a.h3, h4 = _a.h4, h5 = _a.h5, h6 = _a.h6, p = _a.p, article = _a.article, header = _a.header, section = _a.section, footer = _a.footer;
+	var cycle_ui_1 = __webpack_require__(34);
 	/* tslint:disable: no-unused-variable */
 	// style is needed to import CSS from the webpack loader
 	var style = __webpack_require__(91);
@@ -33370,24 +33388,25 @@
 	        ])
 	    ]).DOM);
 	}
-	function main(sources) {
-	    return {
-	        DOM: kitchenSinkView(sources)
-	    };
-	}
-	Cycle.run(main, {
-	    DOM: makeDOMDriver('#app', {
-	        modules: [
-	            StyleModule, PropsModule,
-	            AttrsModule, ClassModule,
-	            HeroModule, EventsModule
-	        ]
-	    })
-	});
+	exports.kitchenSinkView = kitchenSinkView;
 
 
 /***/ },
-/* 93 */
+/* 94 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	var kitchenSink_1 = __webpack_require__(93);
+	function main(sources) {
+	    return {
+	        DOM: kitchenSink_1.kitchenSinkView(sources)
+	    };
+	}
+	exports.main = main;
+
+
+/***/ },
+/* 95 */
 /***/ function(module, exports) {
 
 	// shim for using process in browser
