@@ -6,7 +6,7 @@ eldarlabs/cycle-ui-typescript-webpack
 
 ##[Demonstration Site](http://eldarlabs.github.io/cycle-ui-typescript-webpack/)
 
-A Cycle.js Starter and Kitchen Sink demo to showcase the Cycle-UI component library. The current theme is based on Material Design, but may later use adapters to allow other themes. The project uses TypeScript and WebPack.
+A Cycle.js Starter and Kitchen Sink demo to showcase the Cycle-UI component library. The current theme is based on Material Design, but may later use adapters to allow other themes. The project uses TypeScript, WebPack and the Snabbdom virtual DOM library.
 
 How to use
 ----------
@@ -25,6 +25,8 @@ Related projects
 - [React Toolbox Components](http://react-toolbox.com/#/components) - uses these styles
 - [TypeScript](http://www.typescriptlang.org/) - JavaScript with extra features like types and interfaces.
 - [webpack](http://webpack.github.io/docs/what-is-webpack.html) - bundling the JavaScript and styles.
+- [Snabbdom](https://github.com/paldepind/snabbdom) - a virtual DOM library
+- [cycle-snabbdom](https://github.com/TylorS/cycle-snabbdom/) - a Cycle.js DOM library that uses the Snabbdom virtual DOM.
 
 License
 =======

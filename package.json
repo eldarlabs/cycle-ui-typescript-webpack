@@ -44,7 +44,9 @@
     "starter-kit",
     "boilerplate",
     "reactive",
-    "rxjs"
+    "rxjs",
+    "snabbdom",
+    "virtual-dom"
   ],
   "dependencies": {
     "@cycle/core": "^6.0.0",
