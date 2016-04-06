@@ -82,18 +82,8 @@ function theRadios(sources: any) {
           value: 'RadioSingle',
         }).DOM,
         RadioGroup(sources, {name: 'radiosRock', value: 'RadioEasy'}, [
-          { label: 'Radio easy', value: 'RadioEasy', },
-          { label: 'Radio is not easy', value: 'RadioHard' }
-          // { RadioButton, { label: 'Radio easy', value: 'RadioEasy', } },
-          // { RadioButton, { label: 'Radio is not easy', value: 'RadioHard', } }
-          // RadioButton(sources, {
-          //   label: 'Radio easy',
-          //   value: 'RadioEasy',
-          // }).DOM,
-          // RadioButton(sources, {
-          //   label: 'Radio is not easy',
-          //   value: 'RadioHard',
-          // }).DOM
+          RadioButton(sources, { label: 'Radio easy', value: 'RadioEasy', }),
+          RadioButton(sources, { label: 'Radio is not easy', value: 'RadioHard', })
         ]).DOM,
       ]).DOM
     ]).DOM
@@ -133,7 +123,7 @@ function theFooter() {
 
 export function kitchenSinkView(sources: any) {
   return Observable.just(
-    App({}, [
+    App([
       article([
         theHeader(),
         section(`.${style.content}`, [
