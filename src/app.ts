@@ -1,4 +1,4 @@
-const Cycle = require('@cycle/core');
+const { run } = require('@cycle/core');
 import { main } from './main';
 const { makeDOMDriver, modules } = require('cycle-snabbdom');
 const {
@@ -7,7 +7,7 @@ const {
   HeroModule, EventsModule,
 } = modules;
 
-Cycle.run(main, {
+run(main, {
   DOM: makeDOMDriver('#app', {
     modules: [
       StyleModule, PropsModule,
