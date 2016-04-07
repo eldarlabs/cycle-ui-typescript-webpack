@@ -34143,11 +34143,11 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var Cycle = __webpack_require__(22);
+	var run = __webpack_require__(22).run;
 	var main_1 = __webpack_require__(96);
 	var _a = __webpack_require__(1), makeDOMDriver = _a.makeDOMDriver, modules = _a.modules;
 	var StyleModule = modules.StyleModule, PropsModule = modules.PropsModule, AttrsModule = modules.AttrsModule, ClassModule = modules.ClassModule, HeroModule = modules.HeroModule, EventsModule = modules.EventsModule;
-	Cycle.run(main_1.main, {
+	run(main_1.main, {
 	    DOM: makeDOMDriver('#app', {
 	        modules: [
 	            StyleModule, PropsModule,
