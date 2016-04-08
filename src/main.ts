@@ -1,7 +1,7 @@
-import { kitchenSinkView } from './kitchenSink';
+import { MainView$ } from './components/views/Main';
 
 export function main(sources: any) {
   return {
-    DOM: kitchenSinkView(sources)
+    DOM: MainView$(sources)
   };
 }
