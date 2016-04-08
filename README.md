@@ -8,8 +8,8 @@ eldarlabs/cycle-ui-typescript-webpack
 
 A Cycle.js Starter Kit/Boilerplate. The project uses TypeScript, WebPack and the Snabbdom virtual DOM library.
 
-### Cycle-UI
-There is a Kitchen Sink demo to showcase the Cycle-UI component library. The current theme is based on Material Design, but may later use adapters to allow other themes.
+###[Cycle-UI](https://github.com/eldarlabs/cycle-ui)
+There is a Kitchen Sink demo to showcase the Cycle-UI component library for Cycle.js. The current theme is based on Material Design, but may later use adapters to allow other themes.
 
 How to use
 ----------
