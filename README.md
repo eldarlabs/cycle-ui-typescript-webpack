@@ -6,16 +6,27 @@ eldarlabs/cycle-ui-typescript-webpack
 
 ##[Demonstration Site](http://eldarlabs.github.io/cycle-ui-typescript-webpack/)
 
-A Cycle.js Starter and Kitchen Sink demo to showcase the Cycle-UI component library. The current theme is based on Material Design, but may later use adapters to allow other themes. The project uses TypeScript, WebPack and the Snabbdom virtual DOM library.
+A Cycle.js Starter Kit/Boilerplate. The project uses TypeScript, WebPack and the Snabbdom virtual DOM library.
+
+### Cycle-UI
+There is a Kitchen Sink demo to showcase the Cycle-UI component library. The current theme is based on Material Design, but may later use adapters to allow other themes.
 
 How to use
 ----------
 
-  1. Clone this repository
-  2. Run `npm install' which has a postinstall to run `typings install`
+  1. Clone this repository with no history and only the master branch: `git clone --depth 1 --single-branch https://github.com/eldarlabs/cycle-ui-typescript-webpack.git`
+  2. Run `npm install` which has a postinstall npm script to run `typings install`
   4. `npm start`
   5. Open `localhost:3000` in your browser
+  6. You can delete the kitchenSink folder or modify it to your own needs.
 
+Entitlement
+-----------
+This project is open source so team members can share knowledge and learn from the community. Using this software does not entitle you to any support or right to demand features. See below for how to contribute.
+
+Feedback
+--------
+Let is know of any [Issues](https://github.com/eldarlabs/cycle-ui-typescript-webpack/issues). Pull requests will be considered.
 
 Related projects
 ----------------
