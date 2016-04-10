@@ -16,9 +16,10 @@ How to use
 
   1. Clone this repository with no history and only the master branch: `git clone --depth 1 --single-branch https://github.com/eldarlabs/cycle-ui-typescript-webpack.git`
   2. Run `npm install` which has a postinstall npm script to run `typings install`
-  4. `npm start`
-  5. Open `localhost:3000` in your browser
-  6. You can delete the kitchenSink folder or modify it to your own needs.
+  3. `npm start`
+  4. Open `localhost:3000` in your browser
+  5. You can delete the kitchenSink folder or modify it to your own needs.
+  6. There is an automated CircleCI build that deploys to GitHub pages you may want to remove.
 
 Entitlement
 -----------
