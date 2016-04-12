@@ -20,7 +20,6 @@
     "commit": "git-cz",
     "tsc": "tsc",
     "typings": "typings",
-    "typeupdate": "typings install npm:@eldarlabs/cycle-ui",
     "tslint": "tslint",
     "start": "node server.js",
     "build": "NODE_ENV=prod webpack --progress --colors --config webpack.config.js",
@@ -51,7 +50,7 @@
   "dependencies": {
     "@cycle/core": "^6.0.0",
     "@cycle/isolate": "1.2.0",
-    "@eldarlabs/cycle-ui": "0.5.1",
+    "@eldarlabs/cycle-ui": "0.5.3",
     "autoprefixer": "^6.3.4",
     "classnames": "^2.2.3",
     "cycle-snabbdom": "1.2.1",

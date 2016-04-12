@@ -1,5 +1,4 @@
-const { h1, h2, h3, h4, h5, h6 } =
-  require('cycle-snabbdom');
+const { h1, h2, h3, h4, h5, h6 } = require('cycle-snabbdom');
 import { Card, CardTitle, CardText } from '@eldarlabs/cycle-ui';
 
 export function HeadingsView(sources: any) {
