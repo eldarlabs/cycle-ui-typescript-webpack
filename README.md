@@ -18,7 +18,7 @@ How to use
   2. Run `npm install` which has a postinstall npm script to run `typings install`
   3. `npm start`
   4. Open `localhost:3000` in your browser
-  5. You can delete the kitchenSink folder or modify it to your own needs.
+  5. You can delete the `demo` folder or modify it to your own needs.
   6. There is an automated CircleCI build that deploys to GitHub pages you may want to remove.
 
 Entitlement
