@@ -50,7 +50,7 @@
   "dependencies": {
     "@cycle/core": "^6.0.0",
     "@cycle/isolate": "1.2.0",
-    "@eldarlabs/cycle-ui": "0.6.0",
+    "@eldarlabs/cycle-ui": "0.6.1",
     "autoprefixer": "^6.3.4",
     "classnames": "^2.2.3",
     "cycle-snabbdom": "1.2.1",
