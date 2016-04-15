@@ -12830,23 +12830,6 @@
 
 /***/ },
 /* 7 */
-/***/ function(module, exports) {
-
-	module.exports = {
-	  array: Array.isArray,
-	  primitive: function(s) { return typeof s === 'string' || typeof s === 'number'; },
-	};
-
-
-/***/ },
-/* 8 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-	module.exports = {"card":"style__card___1QRTe","raised":"style__raised___2Ez1d","cardMedia":"style__cardMedia___15JYX","wide":"style__wide___28VO6","square":"style__square___332oC","content":"style__content___3sWYq","contentOverlay":"style__contentOverlay___28Ac_","cardTitle":"style__cardTitle___3ARve","cardActions":"style__cardActions___3_Q_z","cardText":"style__cardText___KU5Pg","avatar":"style__avatar___3I7Nb","subtitle":"style__subtitle___3EyZV","large":"style__large___YMxZr","title":"style__title___3l_ej","small":"style__small___x2vFl"};
-
-/***/ },
-/* 9 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(module, global) {/**
@@ -28880,6 +28863,23 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6)(module), (function() { return this; }())))
 
 /***/ },
+/* 8 */
+/***/ function(module, exports) {
+
+	module.exports = {
+	  array: Array.isArray,
+	  primitive: function(s) { return typeof s === 'string' || typeof s === 'number'; },
+	};
+
+
+/***/ },
+/* 9 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+	module.exports = {"card":"style__card___1QRTe","raised":"style__raised___2Ez1d","cardMedia":"style__cardMedia___15JYX","wide":"style__wide___28VO6","square":"style__square___332oC","content":"style__content___3sWYq","contentOverlay":"style__contentOverlay___28Ac_","cardTitle":"style__cardTitle___3ARve","cardActions":"style__cardActions___3_Q_z","cardText":"style__cardText___KU5Pg","avatar":"style__avatar___3I7Nb","subtitle":"style__subtitle___3EyZV","large":"style__large___YMxZr","title":"style__title___3l_ej","small":"style__small___x2vFl"};
+
+/***/ },
 /* 10 */
 /***/ function(module, exports) {
 
@@ -29683,7 +29683,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	var VNode = __webpack_require__(10);
-	var is = __webpack_require__(7);
+	var is = __webpack_require__(8);
 	
 	function addNS(data, children) {
 	  data.ns = 'http://www.w3.org/2000/svg';
@@ -30015,7 +30015,7 @@
 
 	"use strict";
 	var div = __webpack_require__(1).div;
-	var style = __webpack_require__(8);
+	var style = __webpack_require__(9);
 	var componentFactory_1 = __webpack_require__(3);
 	var classNames = __webpack_require__(4);
 	;
@@ -30055,7 +30055,7 @@
 
 	"use strict";
 	var div = __webpack_require__(1).div;
-	var style = __webpack_require__(8);
+	var style = __webpack_require__(9);
 	var componentFactory_1 = __webpack_require__(3);
 	var classNames = __webpack_require__(4);
 	;
@@ -30087,7 +30087,7 @@
 
 	"use strict";
 	var _a = __webpack_require__(1), div = _a.div, p = _a.p;
-	var style = __webpack_require__(8);
+	var style = __webpack_require__(9);
 	var componentFactory_1 = __webpack_require__(3);
 	var classNames = __webpack_require__(4);
 	;
@@ -30120,11 +30120,11 @@
 
 	"use strict";
 	var _a = __webpack_require__(1), div = _a.div, h5 = _a.h5, p = _a.p;
-	var style = __webpack_require__(8);
+	var style = __webpack_require__(9);
 	var componentFactory_1 = __webpack_require__(3);
 	var classNames = __webpack_require__(4);
 	//import { concat } from 'lodash';
-	var concat = __webpack_require__(9).concat;
+	var concat = __webpack_require__(7).concat;
 	;
 	var CardTitleDefaultProps = {
 	    // Enforce isolation for now
@@ -30154,7 +30154,7 @@
 	        var childrenAsArray = children && typeof children !== 'string' &&
 	            children;
 	        return (div({ props: { className: className } }, [
-	            div(concat(titleDOM, childrenAsStringDOM, subtitleDOM, childrenAsArray)),
+	            div(concat([], titleDOM, childrenAsStringDOM, subtitleDOM, childrenAsArray)),
 	        ]));
 	    });
 	    return {
@@ -30191,6 +30191,7 @@
 	var style = __webpack_require__(95);
 	var componentFactory_1 = __webpack_require__(3);
 	var overlay_1 = __webpack_require__(13);
+	var concat = __webpack_require__(7).concat;
 	exports.DialogDefaultProps = {
 	    isolate: false,
 	    className: '',
@@ -30204,23 +30205,21 @@
 	exports.Dialog = Dialog;
 	function DialogFactory(props$, children) {
 	    var vtree$ = props$.map(function (props) {
-	        var actions = props.actions;
-	        // props.actions.map((action, idx) => {
-	        //   const className = ClassNames(style.button, {[action.className]: action.className});
-	        //   return Button key={idx} {...action} className={className} />;
-	        // });
+	        var actionsDOM = props.actions.map(function (action) {
+	            //const className = ClassNames(style.button, {[action.className]: action.className});
+	            if (typeof action.DOM === 'undefined') {
+	                return action;
+	            }
+	            return action.DOM;
+	        });
 	        var className = classNames([style.root, style[props.type]], (_a = {},
 	            _a[style.active] = props.active,
 	            _a
 	        ), props.className);
 	        return (overlay_1.Overlay({ active: props.active }, [
 	            div({ props: { className: className }, attrs: { 'data-cycle-ui': 'dialog' } }, [
-	                section({ props: { role: 'body', className: style.body } }, [
-	                    props.title && h6({ props: { className: style.title } }, props.title),
-	                    //children
-	                    p('hi')
-	                ]),
-	                nav({ props: { role: 'navigation', className: style.navigation } }, actions)
+	                section({ props: { role: 'body', className: style.body } }, concat([], props.title && h6({ props: { className: style.title } }, props.title), children)),
+	                nav({ props: { role: 'navigation', className: style.navigation } }, actionsDOM)
 	            ])
 	        ]).DOM);
 	        var _a;
@@ -30269,7 +30268,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var lodash_1 = __webpack_require__(9);
+	var lodash_1 = __webpack_require__(7);
 	function defaultUndefinedProps(props, defaultProps) {
 	    // if props are null or undefined
 	    if (props == null) {
@@ -30404,7 +30403,7 @@
 	var classNames = __webpack_require__(4);
 	var style = __webpack_require__(97);
 	var componentFactory_1 = __webpack_require__(3);
-	var concat = __webpack_require__(9).concat;
+	var concat = __webpack_require__(7).concat;
 	exports.OverlayDefaultProps = {
 	    isolate: false,
 	    className: '',
@@ -30741,7 +30740,7 @@
 	
 	var _vnode2 = _interopRequireDefault(_vnode);
 	
-	var _is = __webpack_require__(7);
+	var _is = __webpack_require__(8);
 	
 	var _is2 = _interopRequireDefault(_is);
 	
@@ -33695,7 +33694,7 @@
 /* 88 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var is = __webpack_require__(7);
+	var is = __webpack_require__(8);
 	
 	function arrInvoker(arr) {
 	  return function() {
@@ -33999,7 +33998,7 @@
 	'use strict';
 	
 	var VNode = __webpack_require__(10);
-	var is = __webpack_require__(7);
+	var is = __webpack_require__(8);
 	var domApi = __webpack_require__(85);
 	
 	function isUndef(s) { return s === undefined; }
@@ -34489,7 +34488,8 @@
 	"use strict";
 	var cycle_ui_1 = __webpack_require__(5);
 	var rx_1 = __webpack_require__(2);
-	var _a = __webpack_require__(1), button = _a.button, p = _a.p;
+	var p = __webpack_require__(1).p;
+	//import { CycleComponent } from '@eldarlabs/cycle-ui/helpers/cycleDomInterfaces';
 	function Dialogs(sources) {
 	    var DOM = sources.DOM;
 	    var cancelClick$ = DOM.select('.cancel').events('click').
@@ -34506,12 +34506,15 @@
 	    function view(isDialogActive) {
 	        return (cycle_ui_1.Card(sources, null, [
 	            cycle_ui_1.CardTitle(sources, { title: 'Dialogs (Work in progress)' }, [
-	                cycle_ui_1.CardActions(sources, null, [
+	                cycle_ui_1.CardText(sources, [
 	                    cycle_ui_1.Button(sources, { className: 'showDialog', label: 'Show Modal Dialog',
 	                        raised: true }).DOM,
 	                    p('is active:' + isDialogActive),
 	                    cycle_ui_1.Dialog({ title: 'Test Dialog', active: isDialogActive,
-	                        actions: [cancelButton.DOM, saveButton.DOM] }).DOM,
+	                        actions: [cancelButton.DOM, saveButton] }, [
+	                        p('This is a dialog'),
+	                        p('A dialog can have multiple children controls')
+	                    ]).DOM
 	                ]).DOM
 	            ]).DOM
 	        ]).DOM);
