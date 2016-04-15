@@ -1,3 +1,3 @@
 export declare function main(sources: any): {
-    DOM: Rx.Observable<Rx.Observable<Object>>;
+    DOM: Rx.Observable<any>;
 };
