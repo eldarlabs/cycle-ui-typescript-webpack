@@ -1,8 +1,7 @@
-import { Button, Card, CardTitle, CardActions, Dialog, ButtonFactory } from '@eldarlabs/cycle-ui';
+import { Button, Card, CardTitle, CardText, Dialog } from '@eldarlabs/cycle-ui';
 import { Observable as $ } from 'rx';
-const { button, p } = require('cycle-snabbdom');
+const { p } = require('cycle-snabbdom');
 //import { CycleComponent } from '@eldarlabs/cycle-ui/helpers/cycleDomInterfaces';
-import { Counter } from '../../../counter';
 
 export function Dialogs(sources: any) {
   const DOM = sources.DOM;
@@ -30,12 +29,16 @@ export function Dialogs(sources: any) {
     return (
       Card(sources, null, [
         CardTitle(sources, { title: 'Dialogs (Work in progress)' }, [
-          CardActions(sources, null, [
+          CardText(sources, [
             Button(sources, { className: 'showDialog', label: 'Show Modal Dialog',
               raised: true }).DOM,
             p('is active:' + isDialogActive),
             Dialog({ title: 'Test Dialog', active: isDialogActive,
-              actions: [cancelButton.DOM, saveButton.DOM] }).DOM,
+              actions: [cancelButton.DOM, saveButton] }, [
+                p('This is a dialog'),
+                p('A dialog can have multiple children controls')
+              ]
+            ).DOM
           ]).DOM
         ]).DOM
       ]).DOM
