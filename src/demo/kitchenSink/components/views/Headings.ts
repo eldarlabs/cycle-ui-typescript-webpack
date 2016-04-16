@@ -1,11 +1,11 @@
 const { h1, h2, h3, h4, h5, h6 } = require('cycle-snabbdom');
-import { Card, CardTitle, CardText } from '@eldarlabs/cycle-ui';
+import { CardText } from '@eldarlabs/cycle-ui';
+import { DemoCardView } from '../../../components/DemoCard';
 
 export function HeadingsView(sources: any) {
   return (
-    Card(sources, null, [
-      CardTitle(sources, { title: 'Headings' } ).DOM,
-      CardText(sources, null, [
+    DemoCardView(sources, 'Headings', [
+      CardText(sources, [
         h1('Heading 1'),
         h2('Heading 2'),
         h3('Heading 3'),
@@ -13,6 +13,6 @@ export function HeadingsView(sources: any) {
         h5('Heading 5'),
         h6('Heading 6'),
       ]).DOM,
-    ]).DOM
+    ])
   );
 }

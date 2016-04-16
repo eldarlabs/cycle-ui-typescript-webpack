@@ -1,10 +1,10 @@
 import { Card, CardTitle, CardActions, RadioButton, RadioGroup } from '@eldarlabs/cycle-ui';
+import { DemoCardView } from '../../../components/DemoCard';
 
 export function RadiosView(sources: any) {
   return (
-    Card(sources, null, [
-      CardTitle(sources, { title: 'Radios (Work in progress)' } ).DOM,
-      CardActions(sources, null, [
+    DemoCardView(sources, 'Radios (Work in progress)', [
+      CardActions(sources, [
         RadioButton(sources, {
           label: 'Radio Single',
           value: 'RadioSingle',
@@ -14,6 +14,6 @@ export function RadiosView(sources: any) {
           RadioButton(sources, { label: 'Radio is not easy', value: 'RadioHard', })
         ]).DOM,
       ]).DOM
-    ]).DOM
+    ])
   );
 }
