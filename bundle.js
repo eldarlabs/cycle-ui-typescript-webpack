@@ -81,7 +81,7 @@
 	});
 	exports.makeHTMLDriver = exports.mockDOMSource = exports.makeDOMDriver = exports.video = exports.ul = exports.u = exports.tr = exports.title = exports.thead = exports.th = exports.tfoot = exports.textarea = exports.td = exports.tbody = exports.table = exports.sup = exports.sub = exports.style = exports.strong = exports.span = exports.source = exports.small = exports.select = exports.section = exports.script = exports.samp = exports.s = exports.ruby = exports.rt = exports.rp = exports.q = exports.pre = exports.param = exports.p = exports.option = exports.optgroup = exports.ol = exports.object = exports.noscript = exports.nav = exports.meta = exports.menu = exports.mark = exports.map = exports.main = exports.link = exports.li = exports.legend = exports.label = exports.keygen = exports.kbd = exports.ins = exports.input = exports.img = exports.iframe = exports.i = exports.html = exports.hr = exports.hgroup = exports.header = exports.head = exports.h6 = exports.h5 = exports.h4 = exports.h3 = exports.h2 = exports.h1 = exports.form = exports.footer = exports.figure = exports.figcaption = exports.fieldset = exports.embed = exports.em = exports.dt = exports.dl = exports.div = exports.dir = exports.dfn = exports.del = exports.dd = exports.colgroup = exports.col = exports.code = exports.cite = exports.caption = exports.canvas = exports.button = exports.br = exports.body = exports.blockquote = exports.bdo = exports.bdi = exports.base = exports.b = exports.audio = exports.aside = exports.article = exports.area = exports.address = exports.abbr = exports.a = exports.h = exports.thunk = exports.modules = undefined;
 	
-	var _modules = __webpack_require__(16);
+	var _modules = __webpack_require__(17);
 	
 	var modules = _interopRequireWildcard(_modules);
 	
@@ -12708,7 +12708,7 @@
 	
 	}.call(this));
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6)(module), (function() { return this; }()), __webpack_require__(112)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7)(module), (function() { return this; }()), __webpack_require__(112)))
 
 /***/ },
 /* 3 */
@@ -12808,12 +12808,26 @@
 	var index_5 = __webpack_require__(45);
 	exports.RadioButton = index_5.RadioButton;
 	exports.RadioGroup = index_5.RadioGroup;
-	var index_6 = __webpack_require__(13);
+	var index_6 = __webpack_require__(14);
 	exports.Overlay = index_6.Overlay;
 	//# sourceMappingURL=index.js.map
 
 /***/ },
 /* 6 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	var cycle_ui_1 = __webpack_require__(5);
+	function DemoCardView(sources, title, children) {
+	    return (cycle_ui_1.Card(sources, [
+	        cycle_ui_1.CardTitle(sources, { title: title }, children).DOM
+	    ]).DOM);
+	}
+	exports.DemoCardView = DemoCardView;
+
+
+/***/ },
+/* 7 */
 /***/ function(module, exports) {
 
 	module.exports = function(module) {
@@ -12829,7 +12843,7 @@
 
 
 /***/ },
-/* 7 */
+/* 8 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(module, global) {/**
@@ -28860,10 +28874,10 @@
 	  }
 	}.call(this));
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6)(module), (function() { return this; }())))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7)(module), (function() { return this; }())))
 
 /***/ },
-/* 8 */
+/* 9 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -28873,14 +28887,14 @@
 
 
 /***/ },
-/* 9 */
+/* 10 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"card":"style__card___1QRTe","raised":"style__raised___2Ez1d","cardMedia":"style__cardMedia___15JYX","wide":"style__wide___28VO6","square":"style__square___332oC","content":"style__content___3sWYq","contentOverlay":"style__contentOverlay___28Ac_","cardTitle":"style__cardTitle___3ARve","cardActions":"style__cardActions___3_Q_z","cardText":"style__cardText___KU5Pg","avatar":"style__avatar___3I7Nb","subtitle":"style__subtitle___3EyZV","large":"style__large___YMxZr","title":"style__title___3l_ej","small":"style__small___x2vFl"};
 
 /***/ },
-/* 10 */
+/* 11 */
 /***/ function(module, exports) {
 
 	module.exports = function(sel, data, children, text, elm) {
@@ -28891,21 +28905,21 @@
 
 
 /***/ },
-/* 11 */
+/* 12 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"field":"style__field___fCMeI","disabled":"style__disabled___3CQRf","text":"style__text___wBUNi","input":"style__input___FdrkH","radio":"style__radio___38WFM","radio-checked":"style__radio-checked___Fm3Va","ripple":"style__ripple___3fnAv"};
 
 /***/ },
-/* 12 */
+/* 13 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"header":"style__header___8HNRB","content":"style__content___1qhCf","footer":"style__footer___39ppH","second-content":"style__second-content___GSksS"};
 
 /***/ },
-/* 13 */
+/* 14 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -28914,7 +28928,7 @@
 	//# sourceMappingURL=index.js.map
 
 /***/ },
-/* 14 */
+/* 15 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -28926,7 +28940,7 @@
 	
 	var _fromEvent = __webpack_require__(47);
 	
-	var _select = __webpack_require__(17);
+	var _select = __webpack_require__(18);
 	
 	var matchesSelector = void 0;
 	try {
@@ -29014,7 +29028,7 @@
 	exports.makeEventsSelector = makeEventsSelector;
 
 /***/ },
-/* 15 */
+/* 16 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29024,7 +29038,7 @@
 	});
 	exports.isolateSource = exports.isolateSink = undefined;
 	
-	var _utils = __webpack_require__(19);
+	var _utils = __webpack_require__(20);
 	
 	var isolateSource = function isolateSource(source_, scope) {
 	  return source_.select('.' + _utils.SCOPE_PREFIX + scope);
@@ -29051,7 +29065,7 @@
 	exports.isolateSource = isolateSource;
 
 /***/ },
-/* 16 */
+/* 17 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29096,7 +29110,7 @@
 	exports.EventsModule = _eventlisteners2.default;
 
 /***/ },
-/* 17 */
+/* 18 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29106,9 +29120,9 @@
 	});
 	exports.makeIsStrictlyInRootScope = exports.makeElementSelector = undefined;
 	
-	var _events = __webpack_require__(14);
+	var _events = __webpack_require__(15);
 	
-	var _isolate = __webpack_require__(15);
+	var _isolate = __webpack_require__(16);
 	
 	function makeIsStrictlyInRootScope(namespace) {
 	  var classIsForeign = function classIsForeign(c) {
@@ -29216,7 +29230,7 @@
 	exports.makeIsStrictlyInRootScope = makeIsStrictlyInRootScope;
 
 /***/ },
-/* 18 */
+/* 19 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29274,7 +29288,7 @@
 	exports.transposeVTree = transposeVTree;
 
 /***/ },
-/* 19 */
+/* 20 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -29303,7 +29317,7 @@
 	exports.SCOPE_PREFIX = SCOPE_PREFIX;
 
 /***/ },
-/* 20 */
+/* 21 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29365,7 +29379,7 @@
 	}
 
 /***/ },
-/* 21 */
+/* 22 */
 /***/ function(module, exports, __webpack_require__) {
 
 	
@@ -29416,7 +29430,7 @@
 	};
 
 /***/ },
-/* 22 */
+/* 23 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -29602,7 +29616,7 @@
 
 
 /***/ },
-/* 23 */
+/* 24 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -29679,11 +29693,11 @@
 
 
 /***/ },
-/* 24 */
+/* 25 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var VNode = __webpack_require__(10);
-	var is = __webpack_require__(8);
+	var VNode = __webpack_require__(11);
+	var is = __webpack_require__(9);
 	
 	function addNS(data, children) {
 	  data.ns = 'http://www.w3.org/2000/svg';
@@ -29715,20 +29729,6 @@
 	  }
 	  return VNode(sel, data, children, text, undefined);
 	};
-
-
-/***/ },
-/* 25 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	var cycle_ui_1 = __webpack_require__(5);
-	function DemoCardView(sources, title, children) {
-	    return (cycle_ui_1.Card(sources, [
-	        cycle_ui_1.CardTitle(sources, { title: title }, children).DOM
-	    ]).DOM);
-	}
-	exports.DemoCardView = DemoCardView;
 
 
 /***/ },
@@ -30015,7 +30015,7 @@
 
 	"use strict";
 	var div = __webpack_require__(1).div;
-	var style = __webpack_require__(9);
+	var style = __webpack_require__(10);
 	var componentFactory_1 = __webpack_require__(3);
 	var classNames = __webpack_require__(4);
 	;
@@ -30055,7 +30055,7 @@
 
 	"use strict";
 	var div = __webpack_require__(1).div;
-	var style = __webpack_require__(9);
+	var style = __webpack_require__(10);
 	var componentFactory_1 = __webpack_require__(3);
 	var classNames = __webpack_require__(4);
 	;
@@ -30087,7 +30087,7 @@
 
 	"use strict";
 	var _a = __webpack_require__(1), div = _a.div, p = _a.p;
-	var style = __webpack_require__(9);
+	var style = __webpack_require__(10);
 	var componentFactory_1 = __webpack_require__(3);
 	var classNames = __webpack_require__(4);
 	;
@@ -30120,11 +30120,11 @@
 
 	"use strict";
 	var _a = __webpack_require__(1), div = _a.div, h5 = _a.h5, p = _a.p;
-	var style = __webpack_require__(9);
+	var style = __webpack_require__(10);
 	var componentFactory_1 = __webpack_require__(3);
 	var classNames = __webpack_require__(4);
 	//import { concat } from 'lodash';
-	var concat = __webpack_require__(7).concat;
+	var concat = __webpack_require__(8).concat;
 	;
 	var CardTitleDefaultProps = {
 	    // Enforce isolation for now
@@ -30190,8 +30190,8 @@
 	var classNames = __webpack_require__(4);
 	var style = __webpack_require__(95);
 	var componentFactory_1 = __webpack_require__(3);
-	var overlay_1 = __webpack_require__(13);
-	var concat = __webpack_require__(7).concat;
+	var overlay_1 = __webpack_require__(14);
+	var concat = __webpack_require__(8).concat;
 	exports.DialogDefaultProps = {
 	    isolate: false,
 	    className: '',
@@ -30268,7 +30268,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var lodash_1 = __webpack_require__(7);
+	var lodash_1 = __webpack_require__(8);
 	function defaultUndefinedProps(props, defaultProps) {
 	    // if props are null or undefined
 	    if (props == null) {
@@ -30403,7 +30403,7 @@
 	var classNames = __webpack_require__(4);
 	var style = __webpack_require__(97);
 	var componentFactory_1 = __webpack_require__(3);
-	var concat = __webpack_require__(7).concat;
+	var concat = __webpack_require__(8).concat;
 	exports.OverlayDefaultProps = {
 	    isolate: false,
 	    className: '',
@@ -30441,7 +30441,7 @@
 	"use strict";
 	var classNames = __webpack_require__(4);
 	var div = __webpack_require__(1).div;
-	var style = __webpack_require__(11);
+	var style = __webpack_require__(12);
 	//import Ripple from '../ripple';
 	var componentFactory_1 = __webpack_require__(3);
 	;
@@ -30485,7 +30485,7 @@
 	var _a = __webpack_require__(1), div = _a.div, input = _a.input, label = _a.label, span = _a.span;
 	var classNames = __webpack_require__(4);
 	var Radio_1 = __webpack_require__(42);
-	var style = __webpack_require__(11);
+	var style = __webpack_require__(12);
 	var combineLatestObj = __webpack_require__(46);
 	var componentFactory_1 = __webpack_require__(3);
 	;
@@ -30568,7 +30568,7 @@
 	var div = __webpack_require__(1).div;
 	var classNames = __webpack_require__(4);
 	/* tslint:disable: no-unused-variable */
-	var style = __webpack_require__(11); /* tslint:enable */
+	var style = __webpack_require__(12); /* tslint:enable */
 	var componentFactory_1 = __webpack_require__(3);
 	;
 	var RadioGroupDefaultProps = {
@@ -30736,11 +30736,11 @@
 	  value: true
 	});
 	
-	var _vnode = __webpack_require__(10);
+	var _vnode = __webpack_require__(11);
 	
 	var _vnode2 = _interopRequireDefault(_vnode);
 	
-	var _is = __webpack_require__(8);
+	var _is = __webpack_require__(9);
 	
 	var _is2 = _interopRequireDefault(_is);
 	
@@ -30817,7 +30817,7 @@
 	
 	var _snabbdom = __webpack_require__(92);
 	
-	var _h = __webpack_require__(24);
+	var _h = __webpack_require__(25);
 	
 	var _h2 = _interopRequireDefault(_h);
 	
@@ -30825,23 +30825,23 @@
 	
 	var _classNameFromVNode2 = _interopRequireDefault(_classNameFromVNode);
 	
-	var _selectorParser2 = __webpack_require__(20);
+	var _selectorParser2 = __webpack_require__(21);
 	
 	var _selectorParser3 = _interopRequireDefault(_selectorParser2);
 	
-	var _utils = __webpack_require__(19);
+	var _utils = __webpack_require__(20);
 	
-	var _modules = __webpack_require__(16);
+	var _modules = __webpack_require__(17);
 	
 	var _modules2 = _interopRequireDefault(_modules);
 	
-	var _transposition = __webpack_require__(18);
+	var _transposition = __webpack_require__(19);
 	
-	var _isolate = __webpack_require__(15);
+	var _isolate = __webpack_require__(16);
 	
-	var _select = __webpack_require__(17);
+	var _select = __webpack_require__(18);
 	
-	var _events = __webpack_require__(14);
+	var _events = __webpack_require__(15);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -30962,7 +30962,7 @@
 	
 	var _snabbdomToHtml2 = _interopRequireDefault(_snabbdomToHtml);
 	
-	var _transposition = __webpack_require__(18);
+	var _transposition = __webpack_require__(19);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -31152,7 +31152,7 @@
 	});
 	exports.default = classNameFromVNode;
 	
-	var _selectorParser2 = __webpack_require__(20);
+	var _selectorParser2 = __webpack_require__(21);
 	
 	var _selectorParser3 = _interopRequireDefault(_selectorParser2);
 	
@@ -31338,7 +31338,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	
-	var parseSelector = __webpack_require__(21);
+	var parseSelector = __webpack_require__(22);
 	var VOID_ELEMENTS = __webpack_require__(61);
 	var CONTAINER_ELEMENTS = __webpack_require__(56);
 	
@@ -31402,11 +31402,11 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	
-	var forOwn = __webpack_require__(23);
-	var escape = __webpack_require__(22);
+	var forOwn = __webpack_require__(24);
+	var escape = __webpack_require__(23);
 	var union = __webpack_require__(75);
 	
-	var parseSelector = __webpack_require__(21);
+	var parseSelector = __webpack_require__(22);
 	
 	// data.attrs, data.props, data.class
 	
@@ -31472,8 +31472,8 @@
 
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 	
-	var forOwn = __webpack_require__(23);
-	var escape = __webpack_require__(22);
+	var forOwn = __webpack_require__(24);
+	var escape = __webpack_require__(23);
 	var kebabCase = __webpack_require__(70);
 	
 	// data.style
@@ -31588,7 +31588,7 @@
 	
 	module.exports = root;
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6)(module), (function() { return this; }())))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7)(module), (function() { return this; }())))
 
 /***/ },
 /* 64 */
@@ -33694,7 +33694,7 @@
 /* 88 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var is = __webpack_require__(8);
+	var is = __webpack_require__(9);
 	
 	function arrInvoker(arr) {
 	  return function() {
@@ -33997,8 +33997,8 @@
 	/* global require, module, document, Node */
 	'use strict';
 	
-	var VNode = __webpack_require__(10);
-	var is = __webpack_require__(8);
+	var VNode = __webpack_require__(11);
+	var is = __webpack_require__(9);
 	var domApi = __webpack_require__(85);
 	
 	function isUndef(s) { return s === undefined; }
@@ -34266,7 +34266,7 @@
 /* 93 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var h = __webpack_require__(24);
+	var h = __webpack_require__(25);
 	
 	function init(thunk) {
 	  var i, cur = thunk.data;
@@ -34357,7 +34357,7 @@
 	var _a = __webpack_require__(1), a = _a.a, footer = _a.footer, p = _a.p;
 	/* tslint:disable: no-unused-variable */
 	// style is needed to import CSS from the webpack loader
-	var style = __webpack_require__(12);
+	var style = __webpack_require__(13);
 	/* tslint:enable */
 	function FooterView() {
 	    return (footer("." + style.footer, [
@@ -34382,7 +34382,7 @@
 	var _a = __webpack_require__(1), h1 = _a.h1, header = _a.header;
 	/* tslint:disable: no-unused-variable */
 	// style is needed to import CSS from the webpack loader
-	var style = __webpack_require__(12);
+	var style = __webpack_require__(13);
 	/* tslint:enable */
 	function HeaderView() {
 	    return (header("." + style.header, [
@@ -34446,7 +34446,7 @@
 
 	"use strict";
 	var cycle_ui_1 = __webpack_require__(5);
-	var DemoCard_1 = __webpack_require__(25);
+	var DemoCard_1 = __webpack_require__(6);
 	function ButtonsView(sources) {
 	    return (DemoCard_1.DemoCardView(sources, 'Buttons', [
 	        cycle_ui_1.CardActions(sources, null, [
@@ -34470,7 +34470,7 @@
 	"use strict";
 	var cycle_ui_1 = __webpack_require__(5);
 	var counter_1 = __webpack_require__(102);
-	var DemoCard_1 = __webpack_require__(25);
+	var DemoCard_1 = __webpack_require__(6);
 	function CounterDemoView(sources) {
 	    return (DemoCard_1.DemoCardView(sources, 'Counter App Demo', [
 	        cycle_ui_1.CardText(sources, [
@@ -34536,10 +34536,10 @@
 	"use strict";
 	var _a = __webpack_require__(1), h1 = _a.h1, h2 = _a.h2, h3 = _a.h3, h4 = _a.h4, h5 = _a.h5, h6 = _a.h6;
 	var cycle_ui_1 = __webpack_require__(5);
+	var DemoCard_1 = __webpack_require__(6);
 	function HeadingsView(sources) {
-	    return (cycle_ui_1.Card(sources, null, [
-	        cycle_ui_1.CardTitle(sources, { title: 'Headings' }).DOM,
-	        cycle_ui_1.CardText(sources, null, [
+	    return (DemoCard_1.DemoCardView(sources, 'Headings', [
+	        cycle_ui_1.CardText(sources, [
 	            h1('Heading 1'),
 	            h2('Heading 2'),
 	            h3('Heading 3'),
@@ -34547,7 +34547,7 @@
 	            h5('Heading 5'),
 	            h6('Heading 6'),
 	        ]).DOM,
-	    ]).DOM);
+	    ]));
 	}
 	exports.HeadingsView = HeadingsView;
 
@@ -34559,10 +34559,10 @@
 	"use strict";
 	var h4 = __webpack_require__(1).h4;
 	var cycle_ui_1 = __webpack_require__(5);
+	var DemoCard_1 = __webpack_require__(6);
 	function InputsView(sources) {
-	    return (cycle_ui_1.Card(sources, null, [
-	        cycle_ui_1.CardTitle(sources, { title: 'Text Inputs' }).DOM,
-	        cycle_ui_1.CardText(sources, null, [
+	    return (DemoCard_1.DemoCardView(sources, 'Text Inputs', [
+	        cycle_ui_1.CardText(sources, [
 	            h4('Default Input (no properties)'),
 	            cycle_ui_1.Input(sources).DOM,
 	            cycle_ui_1.Input(sources, {
@@ -34570,7 +34570,7 @@
 	                maxLength: 10,
 	            }).DOM,
 	        ]).DOM,
-	    ]).DOM);
+	    ]));
 	}
 	exports.InputsView = InputsView;
 
@@ -34590,7 +34590,7 @@
 	var Radios_1 = __webpack_require__(109);
 	/* tslint:disable: no-unused-variable */
 	// style is needed to import CSS from the webpack loader
-	var style = __webpack_require__(12); /* tslint:enable */
+	var style = __webpack_require__(13); /* tslint:enable */
 	function KitchenSinkView(sources) {
 	    return (section("." + style.content, [
 	        Spiel_1.SpielView(),
@@ -34613,10 +34613,10 @@
 
 	"use strict";
 	var cycle_ui_1 = __webpack_require__(5);
+	var DemoCard_1 = __webpack_require__(6);
 	function RadiosView(sources) {
-	    return (cycle_ui_1.Card(sources, null, [
-	        cycle_ui_1.CardTitle(sources, { title: 'Radios (Work in progress)' }).DOM,
-	        cycle_ui_1.CardActions(sources, null, [
+	    return (DemoCard_1.DemoCardView(sources, 'Radios (Work in progress)', [
+	        cycle_ui_1.CardActions(sources, [
 	            cycle_ui_1.RadioButton(sources, {
 	                label: 'Radio Single',
 	                value: 'RadioSingle',
@@ -34626,7 +34626,7 @@
 	                cycle_ui_1.RadioButton(sources, { label: 'Radio is not easy', value: 'RadioHard', })
 	            ]).DOM,
 	        ]).DOM
-	    ]).DOM);
+	    ]));
 	}
 	exports.RadiosView = RadiosView;
 
