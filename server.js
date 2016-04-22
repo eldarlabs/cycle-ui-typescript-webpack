@@ -5,7 +5,10 @@ var config = require('./webpack.dev.config');
 // Primary app
 new WebpackDevServer(webpack(config), {
   publicPath: config.output.publicPath,
-  hot: true,
+  hot: false,
+  watchOptions: {
+    aggregateTimeout: 1500,
+  },
   inline: true,
   historyApiFallback: true,
   stats: {colors: true}

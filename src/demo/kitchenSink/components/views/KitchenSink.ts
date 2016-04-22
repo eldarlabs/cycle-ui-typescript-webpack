@@ -2,6 +2,7 @@ const { section, h2 } = require('cycle-snabbdom');
 import { ButtonsView } from './Buttons';
 import { CounterDemoView } from './CounterDemo';
 import { Dialogs } from './Dialogs';
+// import { Drawers } from './Drawers';
 import { HeadingsView } from './Headings';
 import { InputsView } from './Inputs';
 import { SpielView } from './Spiel';
@@ -14,8 +15,8 @@ export function KitchenSinkView(sources: any) {
   return (
     section(`.${style.content}`, [
       SpielView(),
-      CounterDemoView(sources),
       h2('Controls'),
+      // Drawers(sources).DOM,
       Dialogs(sources).DOM,
       ButtonsView(sources),
       InputsView(sources),

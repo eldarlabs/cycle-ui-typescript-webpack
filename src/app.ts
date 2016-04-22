@@ -14,5 +14,5 @@ run(main, {
       AttrsModule, ClassModule,
       HeroModule, EventsModule
     ]
-  })
+  }),
 });
